@@ -1,15 +1,19 @@
 import React from 'react'
 import './App.css'
 import Logo from './mattLogoEdits.png'
+import NavBar from './NavBar'
 
-function App() {
-  return (
-    <div className='App'>
-      <p className='pHeader'>Coming Soon</p>
-      <div className='divider' />
-      <img src={Logo} className='logo' />
-    </div>
-  )
+class App extends React.Component {
+  state = {}
+
+  render() {
+    return (
+      <div className='App'>
+        <NavBar />
+        <img src={Logo} className='logo' />
+      </div>
+    )
+  }
 }
 
 export default App
