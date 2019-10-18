@@ -128,6 +128,10 @@ const Text = styled.h1`
 
 const SmallText = styled.h1`
   font-weight: 100;
+
+  &:hover {
+    border-bottom: 1px solid black;
+  }
 `
 
 class NavBar extends React.Component {
