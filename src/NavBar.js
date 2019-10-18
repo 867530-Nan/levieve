@@ -11,6 +11,10 @@ const MobileNav = styled.div`
   flex-direction: column;
   width: 25%;
   background: rgba(255, 255, 255, 0.5);
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 `
 
 const ImageDiv = styled.div`

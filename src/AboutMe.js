@@ -8,6 +8,11 @@ const PageWrap = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: initial;
+    flex-direction: column;
+  }
 `
 
 const First = styled.div`
@@ -18,6 +23,11 @@ const First = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    border: none;
+    width: 85%;
+  }
 `
 
 const Second = styled.div`
@@ -27,6 +37,9 @@ const Second = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 25px;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `
 
 const Third = styled.div`
@@ -37,6 +50,11 @@ const Third = styled.div`
   flex-direction: column;
   align-items: center;
   border-top: 1px solid black;
+
+  @media (max-width: 768px) {
+    border: none;
+    width: 85%;
+  }
 `
 
 const MomImage = styled.img`
@@ -66,30 +84,39 @@ const FourthDiv = styled.div`
 `
 
 const TextOne = styled.p`
-  font-size: 38px;
-  text-align: center;
-  color: #4c4c4c;
-  font-weight 300;
-  width: 80%;
-  font-family: Forum;
+font-size: 38px;
+text-align: center;
+color: #4c4c4c;
+font-weight 300;
+width: 80%;
+font-family: Forum;
+            @media (max-width: 768px){
+                margin: 30px 0;
+              }
 `
 
 const TextThree = styled.p`
-  font-size: 26px;
-  text-align: center;
-  color: #4c4c4c;
-  font-weight 700;
-  font-style: italic;
-  width: 95%;
-  font-family: Lato;
+font-size: 26px;
+text-align: center;
+color: #4c4c4c;
+font-weight 700;
+font-style: italic;
+width: 95%;
+font-family: Lato;
+@media (max-width: 768px){
+    margin: 30px 0;
+  }
 `
 
 const TextFour = styled.p`
-  font-size: 20px;
-  color: #4c4c4c;
-  font-weight 300;
-  width: 95%;
-  font-family: Raleway;
+font-size: 20px;
+color: #4c4c4c;
+font-weight 300;
+width: 95%;
+font-family: Raleway;
+          @media (max-width: 768px){
+              margin: 30px 0;
+            }
 `
 
 const TextTwo = styled.p`
@@ -97,19 +124,26 @@ const TextTwo = styled.p`
   color: #4c4c4c;
   font-weight: 300;
   font-family: Montserrat;
+  @media (max-width: 768px) {
+    margin: 30px 0;
+  }
 `
 
 class App extends React.Component {
   state = { flip: false }
 
   componentDidMount() {
-    setInterval(() => {
+    this.timer = setInterval(() => {
       this.setState(s => {
         return {
           flip: !s.flip
         }
       })
     }, 10000)
+    if (window.innerWidth < 769) {
+      clearInterval(this.timer)
+      this.setState({ flip: true })
+    }
   }
 
   render() {

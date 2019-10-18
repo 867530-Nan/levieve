@@ -22,7 +22,7 @@ class Hero extends React.Component {
     return (
       <AdjustedDiv background={CoffeeFlower}>
         <NavBar />
-        <SplashContent />
+        {/* <SplashContent /> */}
       </AdjustedDiv>
     )
   }
