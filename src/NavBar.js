@@ -1,19 +1,57 @@
 import React from 'react'
 import styled from 'styled-components'
 import './NavBar.css'
+import Logo from './mattLogoEdits.png'
+
+const MobileNav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  flex-direction: column;
+  width: 25%;
+  background: rgba(255, 255, 255, 0.5);
+`
+
+const ImageDiv = styled.div`
+  width: 75%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 50px;
+`
+const AdjustedImage = styled.img`
+  width: 100%;
+  border-radius: 50%;
+`
+
+const LinkDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+`
+
+const StyledMenuXSpan = styled.span`
+  width: 22px;
+  height: 2px;
+  background-color: black;
+`
 
 const WrapperDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 100%;
+  width: 25%;
 `
 
 const MobileWrapperDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 50px;
 
   &:hover {
@@ -44,25 +82,23 @@ const DesktopNav = styled.div`
   }
 `
 
-const MobileNav = styled.div``
-
 const MobileNavButton = styled.div`
-  display: none;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
+  top: 10%;
+  right: 10%;
+  width: 25px;
+  height: 25px;
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
   }
 
   @media (max-width: 768px) {
-    display: flex;
   }
 `
 
@@ -72,7 +108,7 @@ const XDiv = styled.div`
   align-items: center;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   height: 50px;
   width: 50px;
 
@@ -92,7 +128,7 @@ const SmallText = styled.h1`
 
 class NavBar extends React.Component {
   state = {
-    mobileOpen: false,
+    mobileOpen: true,
     navLinks: [
       { func: () => console.log('About'), name: 'About' },
       { func: () => console.log('Services'), name: 'Services' },
@@ -101,13 +137,10 @@ class NavBar extends React.Component {
     ]
   }
   displayMobileNav() {
-    return (
-      <MobileNav className={this.state.mobileOpen ? 'mobileNav showMobile' : 'mobileNav'}>
-        <XDiv onClick={() => this.setState({ mobileOpen: false })}>X</XDiv>
-        {this.renderMobileNav()}
-      </MobileNav>
-    )
+    return
   }
+
+  tessaLikeMyMouth() {}
 
   renderMobileNav() {
     return this.state.navLinks.map((s, i) => {
@@ -137,15 +170,13 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <WrapperDiv>
-        <DesktopNav>{this.displayDesktopNav()}</DesktopNav>
-        <MobileNavButton
-          onClick={() => this.setState({ mobileOpen: !this.state.mobileOpen })}
-        >
-          X
-        </MobileNavButton>
-        {this.displayMobileNav()}
-      </WrapperDiv>
+      <MobileNav className={this.state.mobileOpen ? 'mobileNav showMobile' : 'mobileNav'}>
+        {/* <XDiv onClick={() => this.setState({ mobileOpen: false })}>X</XDiv> */}
+        <LinkDiv>{this.renderMobileNav()}</LinkDiv>
+        <ImageDiv>
+          <AdjustedImage src={Logo} />
+        </ImageDiv>
+      </MobileNav>
     )
   }
 }

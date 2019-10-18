@@ -1,16 +1,18 @@
 import React from 'react'
 import './App.css'
-import Logo from './mattLogoEdits.png'
+
 import NavBar from './NavBar'
+import Hero from './Hero'
+import AboutMe from './AboutMe'
 
 class App extends React.Component {
   state = {}
 
   render() {
     return (
-      <div className='App'>
-        <NavBar />
-        <img src={Logo} className='logo' />
+      <div>
+        <Hero />
+        <AboutMe />
       </div>
     )
   }
