@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Mom from './Mom.jpg'
+import Mom2 from './Mom2.jpg'
 const PageWrap = styled.div`
-  height: 800px;
+  height: 850px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -41,6 +42,8 @@ const Third = styled.div`
 const MomImage = styled.img`
   max-width: 400px;
   min-width: 150px;
+  opacity: ${props => props.opacity};
+  border-radius: ${props => props.borderRadius};
 `
 
 const FirstTextDiv = styled.div`
@@ -97,7 +100,17 @@ const TextTwo = styled.p`
 `
 
 class App extends React.Component {
-  state = {}
+  state = { flip: false }
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState(s => {
+        return {
+          flip: !s.flip
+        }
+      })
+    }, 10000)
+  }
 
   render() {
     return (
@@ -115,7 +128,11 @@ class App extends React.Component {
           </TextTwoDiv>
         </First>
         <Second>
-          <MomImage src={Mom} />
+          <MomImage
+            src={this.state.flip ? Mom2 : Mom}
+            borderRadius={this.state.flip ? '50%' : '5px'}
+            opacity={this.state.flip ? '0.9' : '0.8'}
+          />
         </Second>
         <Third>
           <TextThreeDiv>
