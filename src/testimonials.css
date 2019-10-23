@@ -1,0 +1,19 @@
+@keyframes slideLeft {
+  100% {
+    transform: translate3d(-50vw, 0, 0);
+  }
+}
+
+.slideLeft {
+  animation: slideLeft 1s linear;
+}
+
+@keyframes slideRight {
+  100% {
+    transform: translate3d(50vw, 0, 0);
+  }
+}
+
+.slideRight {
+  animation: slideLeft 1s linear;
+}
