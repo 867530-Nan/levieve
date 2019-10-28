@@ -96,12 +96,12 @@ const TextOne = styled.p`
 `
 
 const TextThree = styled.p`
-  font-size: 22px;
+  font-size: 30px;
   text-align: center;
   color: #4c4c4c;
   font-weight 700;
   font-style: italic;
-  width: 95%;
+  width: 100%;
   font-family: Lato;
   @media (max-width: 768px){
       margin: 30px 0;
