@@ -100,7 +100,7 @@ const SingleCard = styled.div`
   min-width: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `
 
@@ -109,7 +109,6 @@ const CardFirstText = styled.h1`
   font-weight: 300;
   font-family: Forum;
   color: #4c4c4c;
-  margin: 40px 0;
 `
 
 const CardSecondText = styled.h3`
