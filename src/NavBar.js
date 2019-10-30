@@ -177,10 +177,10 @@ class NavBar extends React.Component {
     return (
       <MobileNav className={this.state.mobileOpen ? 'mobileNav showMobile' : 'mobileNav'}>
         {/* <XDiv onClick={() => this.setState({ mobileOpen: false })}>X</XDiv> */}
-        <LinkDiv>{this.renderMobileNav()}</LinkDiv>
         <ImageDiv>
           <AdjustedImage src={Logo} />
         </ImageDiv>
+        <LinkDiv>{this.renderMobileNav()}</LinkDiv>
       </MobileNav>
     )
   }

@@ -131,6 +131,12 @@ class Testimonials extends React.Component {
     translateNumber: 0,
     testCards: [
       {
+        name: 'MEGHAN + CATHY',
+        text:
+          'We are so excited to learn that Cheri had gotten into the wedding / event planning space. She worked with us years ago at the start of what was to become Women Run the Cities Race in the Twin Cities and was a key player in the organization and it is operations which helped propel the race into record setting attendance. She is highly organized, strategic and cool under pressure – perfect qualities to lead LeVieve Events! Congrats Cheri',
+        secondaryText: 'October 2019 - East Town Ballroom'
+      },
+      {
         name: 'MADDIE',
         text:
           'Even though I hadn’t gotten the chance to meet with Cheri before my wedding, she knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life. I knew I could trust Cheri to get everything done and without any questions. My wedding day was absolutely perfect, thanks to Cheri.',
@@ -144,6 +150,12 @@ class Testimonials extends React.Component {
       },
       {
         name: 'ELLIE',
+        text:
+          'Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.',
+        secondaryText: 'October 2019 - East Town Ballroom'
+      },
+      {
+        name: 'RENEE',
         text:
           'Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.',
         secondaryText: 'October 2019 - East Town Ballroom'
