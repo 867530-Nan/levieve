@@ -95,6 +95,7 @@ const CardWrap = styled.div`
 
 const SingleCard = styled.div`
   background-color: white;
+  box-shadow: 0 0px 15px -7px black;
   width: 80%;
   border-radius: 3px;
   min-width: 450px;

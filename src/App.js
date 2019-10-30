@@ -7,6 +7,7 @@ import Services from './Services'
 import Contact from './Contact'
 import AboutMe from './AboutMe'
 import Testimonials from './Testimonials'
+import CommentForm from './CommentForm'
 
 class App extends React.Component {
   state = {}
@@ -29,7 +30,7 @@ class App extends React.Component {
           <Services />
         </span>
         <span id='contact'>
-          <Contact />
+          <CommentForm />
         </span>
       </div>
     )
