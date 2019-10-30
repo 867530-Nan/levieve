@@ -74,7 +74,7 @@ const slideAnimation = props => keyframes`
 `
 
 const BottomDiv = styled.div`
-  background: linear-gradient(180deg, #553e4c 10%, #f6f7f5 10%);
+  background: linear-gradient(180deg, #553e4c 10%, #c9cac9 10%);
 
   height: 75%;
   display: flex;
@@ -108,14 +108,21 @@ const CardFirstText = styled.h1`
   text-align: center;
   font-weight: 300;
   font-family: Forum;
+  color: #4c4c4c;
   margin: 40px 0;
 `
 
-const CardSecondText = styled.h4`
+const CardSecondText = styled.h3`
   text-align: center;
-  font-family: Montserrat;
-  font-weight: 300;
+  font-family: Lato;
+  font-weight: 500;
   width: 95%;
+`
+
+const CardDateLocation = styled.h3`
+  font-weight: 700;
+  font-family: News Cycle;
+  color: #4c4c4c;
 `
 
 class Testimonials extends React.Component {
@@ -125,34 +132,22 @@ class Testimonials extends React.Component {
     translateNumber: 0,
     testCards: [
       {
-        name: 'CARLY + NICK',
+        name: 'MADDIE',
         text:
-          'Hands down Camila is the best! She was very organized and helpful from our first phone call to our send-off. Our wedding day came and went without a single issue – she was on top of everything! She managed all of the moving parts seamlessly – everything was perfect and exactly like we discussed.'
+          'Even though I hadn’t gotten the chance to meet with Cheri before my wedding, she knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life. I knew I could trust Cheri to get everything done and without any questions. My wedding day was absolutely perfect, thanks to Cheri.',
+        secondaryText: 'July 2019 - Neu Neu Events Center'
       },
       {
-        name: 'MARJORIE + PATRICK',
+        name: 'JEANNE',
         text:
-          'Hands down Camila is the best! She was very organized and helpful from our first phone call to our send-off. Our wedding day came and went without a single issue – she was on top of everything! She managed all of the moving parts seamlessly – everything was perfect and exactly like we discussed.'
+          'Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride I was able to relax and enjoy every moment of the memorable day.',
+        secondaryText: 'May 2018 - Window on Minnesota'
       },
       {
-        name: 'ANNIE + TOM',
+        name: 'ELLIE',
         text:
-          'Hands down Camila is the best! She was very organized and helpful from our first phone call to our send-off. Our wedding day came and went without a single issue – she was on top of everything! She managed all of the moving parts seamlessly – everything was perfect and exactly like we discussed.'
-      },
-      {
-        name: 'KELLY + ROBERT',
-        text:
-          'Hands down Camila is the best! She was very organized and helpful from our first phone call to our send-off. Our wedding day came and went without a single issue – she was on top of everything! She managed all of the moving parts seamlessly – everything was perfect and exactly like we discussed.'
-      },
-      {
-        name: 'NOELLE + DEVIN',
-        text:
-          'Hands down Camila is the best! She was very organized and helpful from our first phone call to our send-off. Our wedding day came and went without a single issue – she was on top of everything! She managed all of the moving parts seamlessly – everything was perfect and exactly like we discussed.'
-      },
-      {
-        name: 'KORI + DARYNE',
-        text:
-          'Hands down Camila is the best! She was very organized and helpful from our first phone call to our send-off. Our wedding day came and went without a single issue – she was on top of everything! She managed all of the moving parts seamlessly – everything was perfect and exactly like we discussed.'
+          'Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.',
+        secondaryText: 'October 2019 - East Town Ballroom'
       }
     ],
     scroller: '',
@@ -254,6 +249,8 @@ class Testimonials extends React.Component {
                   <CardFirstText>{s.name}</CardFirstText>
                   <CardLine />
                   <CardSecondText>{s.text}</CardSecondText>
+                  <CardLine />
+                  <CardDateLocation>{s.secondaryText}</CardDateLocation>
                 </SingleCard>
               </CardWrap>
             )

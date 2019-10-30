@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Mom from './Mom.jpg'
 import Mom2 from './Mom2.jpg'
 const PageWrap = styled.div`
-  height: 700px;
+  height: 600px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -96,12 +96,12 @@ const TextOne = styled.p`
 `
 
 const TextThree = styled.p`
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   color: #4c4c4c;
   font-weight 700;
   font-style: italic;
-  width: 100%;
+  width: 85%;
   font-family: Lato;
   @media (max-width: 768px){
       margin: 30px 0;
@@ -113,7 +113,7 @@ const TextFour = styled.p`
   color: #4c4c4c;
   font-weight 300;
   width: 95%;
-  font-family: Raleway;
+  font-family: Montserrat;
   @media (max-width: 768px){
       margin: 30px 0;
   }
@@ -154,14 +154,15 @@ class App extends React.Component {
         <Third>
           <TextThreeDiv>
             <TextFour>
-              {/* Currently, I serve as Operations Director for a Fortune 500 company, and
-              spend my nights and weekends dreaming up beautiful celebrations. */}
-              At the end of the day, my goal is to help you marry your best friend in the
-              most stress-free way imaginable.
+              Currently, I serve as Operations Director for a Fortune 500 company, and
+              spend my nights and weekends dreaming up beautiful celebrations.
             </TextFour>
           </TextThreeDiv>
           <FourthDiv>
-            <TextThree>Let's Boogie!</TextThree>
+            <TextThree>
+              At the end of the day, my goal is to help you marry your best friend in the
+              most stress-free way imaginable.
+            </TextThree>
           </FourthDiv>
         </Third>
       </PageWrap>

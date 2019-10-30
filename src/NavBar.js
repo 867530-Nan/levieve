@@ -138,22 +138,20 @@ class NavBar extends React.Component {
   state = {
     mobileOpen: true,
     navLinks: [
-      { func: () => console.log('About'), name: 'About' },
-      { func: () => console.log('Services'), name: 'Services' },
-      { func: () => console.log('Testimonials'), name: 'Testimonials' },
-      { func: () => console.log('Contact'), name: 'Contact' }
+      { anchor: 'aboutMe', name: 'About' },
+      { anchor: 'testimonials', name: 'Testimonials' },
+      { anchor: 'services', name: 'Services' },
+      { anchor: 'contact', name: 'Contact' }
     ]
   }
-  displayMobileNav() {
-    return
-  }
-
-  tessaLikeMyMouth() {}
 
   renderMobileNav() {
     return this.state.navLinks.map((s, i) => {
       return (
-        <MobileWrapperDiv onClick={s.func} key={i * Math.random()}>
+        <MobileWrapperDiv
+          onClick={() => this.props.navFunc(s.anchor)}
+          key={i * Math.random()}
+        >
           <SmallText>{s.name}</SmallText>
         </MobileWrapperDiv>
       )
@@ -165,7 +163,6 @@ class NavBar extends React.Component {
       const width = 100 / this.state.navLinks.length
       return (
         <WrapperDesktopDiv
-          onClick={s.func}
           key={i * Math.random()}
           borderRight={i !== this.state.navLinks.length - 1 ? '1px solid black' : null}
           width={`${width}%`}

@@ -21,7 +21,7 @@ class Hero extends React.Component {
   render() {
     return (
       <AdjustedDiv background={CoffeeFlower}>
-        <NavBar />
+        <NavBar navFunc={this.props.navFunc} />
         {/* <SplashContent /> */}
       </AdjustedDiv>
     )
