@@ -116,6 +116,9 @@ const CardSecondText = styled.h3`
   font-family: Lato;
   font-weight: 500;
   width: 95%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
 `
 
 const CardDateLocation = styled.h3`
