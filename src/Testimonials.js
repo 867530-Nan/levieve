@@ -171,6 +171,11 @@ class Testimonials extends React.Component {
     console.log(window.innerWidth)
     const gotIt = document.getElementById('bottomScroller')
     this.setState({ scroller: gotIt })
+    if (window.innerWidth < 768) {
+      this.setState({ scroller: gotIt, cardWidth: window.innerWidth })
+    } else {
+      this.setState({ scroller: gotIt, cardWidth: window.innerWidth * 0.5 })
+    }
   }
 
   rightClick = () => {
@@ -231,7 +236,7 @@ class Testimonials extends React.Component {
             <Arrow>&#8592;</Arrow>
           </FirstCombo>
           <TopComboWrapper>
-            <TopDivText>TESTIMONIALS</TopDivText>
+            <TopDivText>GRATITUDE</TopDivText>
             <TopDivBottomText>FEEDBACK FROM PAST COUPLES</TopDivBottomText>
           </TopComboWrapper>
           <FirstCombo onClick={this.rightClick}>

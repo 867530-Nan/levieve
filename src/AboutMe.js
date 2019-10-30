@@ -22,9 +22,10 @@ const First = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
   @media (max-width: 768px) {
+    align-items: center;
     border: none;
     width: 85%;
   }
@@ -59,34 +60,44 @@ const Third = styled.div`
 
 const MomImage = styled.img`
   width: 100%;
-  min-width: 150px;
+  min-width: 250px;
   max-width: 330px;
   opacity: ${props => props.opacity};
   border-radius: ${props => props.borderRadius};
+
+  @media (max-width: 768px) {
+    min-width: 100px;
+  }
 `
 
 const FirstTextDiv = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  height: 40%;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `
 
 const TextTwoDiv = styled.div`
-  width: 90%;
+  width: 100%;
+  height: 60%;
 `
 
 const TextThreeDiv = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 `
 
 const FourthDiv = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 `
 
 const TextOne = styled.p`
   font-size: 38px;
-  text-align: center;
+  text-align: right;
   color: #4c4c4c;
   font-weight 300;
   font-family: Forum;
@@ -95,9 +106,9 @@ const TextOne = styled.p`
   }
 `
 
-const TextThree = styled.p`
+const TextFour = styled.p`
   font-size: 24px;
-  text-align: center;
+  text-align: left;
   color: #4c4c4c;
   font-weight 700;
   font-style: italic;
@@ -108,24 +119,26 @@ const TextThree = styled.p`
   }
 `
 
-const TextFour = styled.p`
+const TextThree = styled.p`
   font-size: 20px;
   color: #4c4c4c;
   font-weight 300;
   width: 95%;
   font-family: Montserrat;
   @media (max-width: 768px){
-      margin: 30px 0;
+      margin: 30px 0 0 0;
   }
 `
 
 const TextTwo = styled.p`
   font-size: 20px;
+  text-align: right;
   color: #4c4c4c;
   font-weight: 300;
   font-family: Montserrat;
   @media (max-width: 768px) {
-    margin: 30px 0;
+    margin: 0 0 30px 0;
+    text-align: center;
   }
 `
 
@@ -141,28 +154,33 @@ class App extends React.Component {
           </FirstTextDiv>
           <TextTwoDiv>
             <TextTwo>
-              Hello! Cheri here. Celebration Planner. Yahtzee Champion. Campfire
-              Connoisseur. I'm a quick thinker with an ear for details. I'm a veteran in
-              business operations and strategic planning, and would love to organize your
-              party.
+              Hello! Cheri here.
+              <br />
+              Campfire Connoisseur.
+              <br />
+              Celebration Planner.
+              <br />
+              Yahtzee Champion.
+              <br />
+              I'm a quick thinker with an ear for details.
             </TextTwo>
           </TextTwoDiv>
         </First>
         <Second>
-          <MomImage src={Mom2} borderRadius={'50%'} opacity={'0.9'} />
+          <MomImage src={Mom2} borderRadius={'20px'} opacity={'0.9'} />
         </Second>
         <Third>
           <TextThreeDiv>
-            <TextFour>
+            <TextThree>
               Currently, I serve as Operations Director for a Fortune 500 company, and
               spend my nights and weekends dreaming up beautiful celebrations.
-            </TextFour>
+            </TextThree>
           </TextThreeDiv>
           <FourthDiv>
-            <TextThree>
+            <TextFour>
               At the end of the day, my goal is to help you marry your best friend in the
               most stress-free way imaginable.
-            </TextThree>
+            </TextFour>
           </FourthDiv>
         </Third>
       </PageWrap>

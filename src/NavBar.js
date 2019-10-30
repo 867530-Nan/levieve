@@ -128,7 +128,7 @@ const Text = styled.h1`
 
 const SmallText = styled.h1`
   font-weight: 100;
-
+  font-family: Neoteric;
   &:hover {
     border-bottom: 1px solid black;
   }
@@ -139,13 +139,13 @@ class NavBar extends React.Component {
     mobileOpen: true,
     navLinks: [
       { anchor: 'aboutMe', name: 'About' },
-      { anchor: 'testimonials', name: 'Testimonials' },
+      { anchor: 'testimonials', name: 'Gratitude' },
       { anchor: 'services', name: 'Services' },
       { anchor: 'contact', name: 'Contact' }
     ]
   }
 
-  renderMobileNav() {
+  renderNavLinks() {
     return this.state.navLinks.map((s, i) => {
       return (
         <MobileWrapperDiv
@@ -158,29 +158,13 @@ class NavBar extends React.Component {
     })
   }
 
-  displayDesktopNav() {
-    return this.state.navLinks.map((s, i) => {
-      const width = 100 / this.state.navLinks.length
-      return (
-        <WrapperDesktopDiv
-          key={i * Math.random()}
-          borderRight={i !== this.state.navLinks.length - 1 ? '1px solid black' : null}
-          width={`${width}%`}
-        >
-          <Text>{s.name}</Text>
-        </WrapperDesktopDiv>
-      )
-    })
-  }
-
   render() {
     return (
       <MobileNav className={this.state.mobileOpen ? 'mobileNav showMobile' : 'mobileNav'}>
-        {/* <XDiv onClick={() => this.setState({ mobileOpen: false })}>X</XDiv> */}
         <ImageDiv>
           <AdjustedImage src={Logo} />
         </ImageDiv>
-        <LinkDiv>{this.renderMobileNav()}</LinkDiv>
+        <LinkDiv>{this.renderNavLinks()}</LinkDiv>
       </MobileNav>
     )
   }
