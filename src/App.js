@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-
+import styled from 'styled-components'
 import NavBar from './NavBar'
 import Hero from './Hero'
 import Services from './Services'
@@ -8,6 +8,11 @@ import Contact from './Contact'
 import AboutMe from './AboutMe'
 import Testimonials from './Testimonials'
 import CommentForm from './CommentForm'
+import Footer from './Footer'
+
+const PageWrap = styled.div`
+  background-color: black;
+`
 
 class App extends React.Component {
   state = {}
@@ -18,7 +23,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <PageWrap>
         <Hero navFunc={this.navFunc} />
         <span id='aboutMe'>
           <AboutMe />
@@ -32,7 +37,8 @@ class App extends React.Component {
         <span id='contact'>
           <CommentForm />
         </span>
-      </div>
+        <Footer />
+      </PageWrap>
     )
   }
 }

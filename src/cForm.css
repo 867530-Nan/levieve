@@ -1,0 +1,12 @@
+::placeholder {
+  color: black;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.commentFormPlaceholder {
+  font-size: 18px;
+  box-shadow: none;
+  border: none;
+  text-indent: 10px;
+}

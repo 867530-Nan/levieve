@@ -8,7 +8,7 @@ const PageWrap = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  background-color: white;
   @media (max-width: 768px) {
     height: initial;
     flex-direction: column;
@@ -167,7 +167,7 @@ class App extends React.Component {
           </TextTwoDiv>
         </First>
         <Second>
-          <MomImage src={Mom2} borderRadius={'20px'} opacity={'0.9'} />
+          <MomImage src={Mom2} borderRadius={'40px'} opacity={'0.9'} />
         </Second>
         <Third>
           <TextThreeDiv>

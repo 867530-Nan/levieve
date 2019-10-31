@@ -108,7 +108,7 @@ const SingleCard = styled.div`
 const CardFirstText = styled.h1`
   text-align: center;
   font-weight: 300;
-  font-family: Forum;
+  font-family: Neoteric;
   color: #4c4c4c;
 `
 
@@ -174,7 +174,9 @@ class Testimonials extends React.Component {
   componentDidMount() {
     console.log(window.innerWidth)
     const gotIt = document.getElementById('bottomScroller')
-    this.setState({ scroller: gotIt })
+    this.myTimer = setTimeout(() => {
+      this.leftClick()
+    }, 8500)
     if (window.innerWidth < 768) {
       this.setState({ scroller: gotIt, cardWidth: window.innerWidth })
     } else {
@@ -183,6 +185,7 @@ class Testimonials extends React.Component {
   }
 
   rightClick = () => {
+    clearTimeout(this.myTimer)
     const gotIt = document.getElementById('bottomScroller')
     if (
       this.state.scrollNumber !== 0 &&
@@ -211,6 +214,7 @@ class Testimonials extends React.Component {
   }
 
   leftClick = () => {
+    clearTimeout(this.myTimer)
     const gotIt = document.getElementById('bottomScroller')
     if (this.state.scrollNumber !== this.state.testCards.length - 2) {
       // gotIt.classList.add('slideLeft')
