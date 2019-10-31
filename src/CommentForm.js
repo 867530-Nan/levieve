@@ -148,7 +148,7 @@ class CommentForm extends Component {
         <WhiteBox>
           <BigText>
             Let's talk, <br />
-            Send me hear your idea
+            Send me a message below.
             <br />
           </BigText>
           <Anchor href='mailto:levieveevents@gmail.com'>
