@@ -91,6 +91,10 @@ const CardWrap = styled.div`
   margin: 0 50px;
   height: inherit;
   min-height: 500px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
 `
 
 const SingleCard = styled.div`
@@ -103,6 +107,10 @@ const SingleCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 450px) {
+    min-width: 350px;
+  }
 `
 
 const CardFirstText = styled.h1`
@@ -120,6 +128,8 @@ const CardSecondText = styled.h3`
   min-height: 200px;
   display: flex;
   align-items: center;
+  @media (max-width: 450px) {
+  }
 `
 
 const CardDateLocation = styled.h3`

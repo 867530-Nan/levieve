@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import JSON from '../package.json'
 
 const PageWrap = styled.div`
   display: flex;
@@ -23,6 +24,20 @@ const Title = styled.h1`
   font-size: 30px;
 `
 
+const SmallTitle = styled.span`
+  font-family: Lato;
+  font-weight: 100;
+  color: white;
+  font-size: 22px;
+`
+
+const Version = styled.h1`
+  font-family: Lato;
+  font-weight: 100;
+  color: white;
+  font-size: 16px;
+`
+
 const Arrow = styled.div`
   font-size: 30px;
   color: white;
@@ -44,10 +59,13 @@ class Footer extends React.Component {
     return (
       <PageWrap>
         <Line />
-        <Title>LeVieve Events</Title>
+        <Title>
+          LeVieve Events <SmallTitle>&#169; 2019</SmallTitle>
+        </Title>
         <Arrow onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}>
           &#8593;
         </Arrow>
+        <Version>v{JSON.version}</Version>
       </PageWrap>
     )
   }
