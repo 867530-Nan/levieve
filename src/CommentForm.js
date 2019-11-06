@@ -76,11 +76,13 @@ const TextAreaWrap = styled.div`
   min-height: 50px;
   min-width: 250px;
   height: 60px;
+  z-index: 1000;
 `
 
 const FormTextArea = styled.textarea`
   height: 60px;
   width: 100%;
+  resize: vertical;
 `
 
 const SubmitButton = styled.div`
@@ -271,7 +273,7 @@ class CommentForm extends Component {
                   className='commentFormPlaceholder'
                   id='email'
                   value={this.state.email}
-                  placeholder='gosling@email.com'
+                  placeholder='brad.pitt@email.com'
                 />
               </EmailWrap>
               <TextAreaWrap>

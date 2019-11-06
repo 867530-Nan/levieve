@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import './NavBar.css'
-import Logo from './mattLogoEdits.png'
+import Logo from './images/origLogo.png'
 
 const MobileNav = styled.div`
   display: flex;
@@ -18,12 +18,20 @@ const MobileNav = styled.div`
 `
 
 const ImageDiv = styled.div`
-  width: 75%;
+  width: 90%;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   margin-top: 50px;
 `
+
+const LogoWrap = styled.div`
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: white;
+`
+
 const AdjustedImage = styled.img`
   width: 100%;
   border-radius: 50%;

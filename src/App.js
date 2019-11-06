@@ -7,6 +7,7 @@ import Services from './Services'
 import Contact from './Contact'
 import AboutMe from './AboutMe'
 import Testimonials from './Testimonials'
+import EventTypeIconBanner from './EventTypeIconBanner'
 import CommentForm from './CommentForm'
 import Footer from './Footer'
 
@@ -25,6 +26,7 @@ class App extends React.Component {
     return (
       <PageWrap>
         <Hero navFunc={this.navFunc} />
+        <EventTypeIconBanner />
         <span id='aboutMe'>
           <AboutMe />
         </span>

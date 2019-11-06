@@ -1,6 +1,6 @@
 {
   "name": "levieve",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "private": true,
   "dependencies": {
     "react": "^16.9.0",

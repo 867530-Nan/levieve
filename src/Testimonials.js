@@ -37,7 +37,7 @@ const TopComboWrapper = styled.div`
 
 const TopDivText = styled.h1`
   font-size: 42px;
-  font-family: Playfair Display;
+  font-family: Neoteric;
   color: white;
   font-weight: 300;
   text-align: center;
@@ -49,7 +49,7 @@ const TopDivText = styled.h1`
 `
 
 const TopDivBottomText = styled.p`
-  font-family: Playfair Display;
+  font-family: Neoteric;
   color: white;
   margin: 0;
   font-weight: 300;
@@ -74,7 +74,7 @@ const slideAnimation = props => keyframes`
 `
 
 const BottomDiv = styled.div`
-  background: linear-gradient(180deg, #553e4c 10%, #c9cac9 10%);
+  background: linear-gradient(180deg, #553e4c 10%, #87a084 10%);
 
   height: 75%;
   display: flex;
@@ -100,42 +100,35 @@ const CardWrap = styled.div`
 const SingleCard = styled.div`
   background-color: white;
   box-shadow: 0 0px 15px -7px black;
-  width: 80%;
+  width: 100%;
   border-radius: 3px;
-  min-width: 450px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (max-width: 450px) {
-    min-width: 350px;
-  }
 `
 
 const CardFirstText = styled.h1`
   text-align: center;
-  font-weight: 300;
+  font-weight: 500;
   font-family: Neoteric;
-  color: #4c4c4c;
 `
 
-const CardSecondText = styled.h3`
+const CardSecondText = styled.h4`
   text-align: center;
-  font-family: Lato;
+  font-family: Helvetica;
   font-weight: 500;
   width: 95%;
   min-height: 200px;
   display: flex;
   align-items: center;
-  @media (max-width: 450px) {
-  }
 `
 
-const CardDateLocation = styled.h3`
-  font-weight: 700;
-  font-family: News Cycle;
-  color: #4c4c4c;
+const CardDateLocation = styled.h4`
+  font-weight: 500;
+  font-family: Helvetica;
+  font-style: italic;
 `
 
 class Testimonials extends React.Component {
@@ -145,33 +138,33 @@ class Testimonials extends React.Component {
     translateNumber: 0,
     testCards: [
       {
-        name: 'MEGHAN + CATHY',
-        text:
-          'We are so excited to learn that Cheri had gotten into the wedding / event planning space. She worked with us years ago at the start of what was to become Women Run the Cities Race in the Twin Cities and was a key player in the organization and it is operations which helped propel the race into record setting attendance. She is highly organized, strategic and cool under pressure – perfect qualities to lead LeVieve Events! Congrats Cheri',
-        secondaryText: 'October 2019 - East Town Ballroom'
-      },
-      {
-        name: 'MADDIE',
+        name: 'Maddie + Ethan',
         text:
           'Even though I hadn’t gotten the chance to meet with Cheri before my wedding, she knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life. I knew I could trust Cheri to get everything done and without any questions. My wedding day was absolutely perfect, thanks to Cheri.',
-        secondaryText: 'July 2019 - Neu Neu Events Center'
+        secondaryText: 'Silverwood Park - Minneapolis'
       },
       {
-        name: 'JEANNE',
+        name: 'Ellie + Chris',
+        text:
+          'Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.',
+        secondaryText: 'The Graduate Hotel'
+      },
+      {
+        name: 'Jeanne',
         text:
           'Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride I was able to relax and enjoy every moment of the memorable day.',
-        secondaryText: 'May 2018 - Window on Minnesota'
+        secondaryText: 'Silverwood Park - Minneapolis'
       },
       {
-        name: 'ELLIE',
+        name: 'Meghan + Cathy',
         text:
-          'Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.',
-        secondaryText: 'October 2019 - East Town Ballroom'
+          'We are so excited to learn that Cheri had gotten into the wedding / event planning space. She worked with us years ago at the start of what was to become Women Run the Cities Race in the Twin Cities and was a key player in the organization and it is operations which helped propel the race into record setting attendance. She is highly organized, strategic and cool under pressure – perfect qualities to lead LeVieve Events! Congrats Cheri',
+        secondaryText: 'Women Run the Cities - Minneapolis'
       },
       {
-        name: 'RENEE',
+        name: 'Renee',
         text:
-          'Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.',
+          'I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life. I greatly appreciated Cheri’s professionalism, energy and dependability during those planning months and especially on the day of the event.',
         secondaryText: 'October 2019 - East Town Ballroom'
       }
     ],
@@ -187,7 +180,7 @@ class Testimonials extends React.Component {
     this.myTimer = setTimeout(() => {
       this.leftClick()
     }, 8500)
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 850) {
       this.setState({ scroller: gotIt, cardWidth: window.innerWidth })
     } else {
       this.setState({ scroller: gotIt, cardWidth: window.innerWidth * 0.5 })
@@ -195,6 +188,29 @@ class Testimonials extends React.Component {
   }
 
   rightClick = () => {
+    clearTimeout(this.myTimer)
+    const gotIt = document.getElementById('bottomScroller')
+    if (this.state.scrollNumber !== this.state.testCards.length - 2) {
+      // gotIt.classList.add('slideLeft')
+
+      this.setState(s => {
+        return {
+          scrollNumber: s.scrollNumber + 1,
+          fromNumber: s.toNumber,
+          toNumber: s.toNumber + s.cardWidth
+        }
+      })
+      setTimeout(() => {
+        this.setState(s => {
+          return { translateNumber: s.translateNumber + s.cardWidth }
+        })
+      }, 1000)
+      // setTimeout(() => {
+      // }, 1000)
+    }
+  }
+
+  leftClick = () => {
     clearTimeout(this.myTimer)
     const gotIt = document.getElementById('bottomScroller')
     if (
@@ -223,29 +239,6 @@ class Testimonials extends React.Component {
     }
   }
 
-  leftClick = () => {
-    clearTimeout(this.myTimer)
-    const gotIt = document.getElementById('bottomScroller')
-    if (this.state.scrollNumber !== this.state.testCards.length - 2) {
-      // gotIt.classList.add('slideLeft')
-
-      this.setState(s => {
-        return {
-          scrollNumber: s.scrollNumber + 1,
-          fromNumber: s.toNumber,
-          toNumber: s.toNumber + s.cardWidth
-        }
-      })
-      setTimeout(() => {
-        this.setState(s => {
-          return { translateNumber: s.translateNumber + s.cardWidth }
-        })
-      }, 1000)
-      // setTimeout(() => {
-      // }, 1000)
-    }
-  }
-
   render() {
     return (
       <PurpDiv>
@@ -255,7 +248,7 @@ class Testimonials extends React.Component {
           </FirstCombo>
           <TopComboWrapper>
             <TopDivText>GRATITUDE</TopDivText>
-            <TopDivBottomText>FEEDBACK FROM PAST COUPLES</TopDivBottomText>
+            <TopDivBottomText>FROM PAST EVENTS</TopDivBottomText>
           </TopComboWrapper>
           <FirstCombo onClick={this.rightClick}>
             <Arrow>&#8594;</Arrow>

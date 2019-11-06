@@ -9,7 +9,7 @@ const PageWrap = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     height: initial;
     flex-direction: column;
   }
@@ -21,10 +21,10 @@ const First = styled.div`
   border-bottom: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-end;
 
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     align-items: center;
     border: none;
     width: 85%;
@@ -38,7 +38,7 @@ const Second = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 25px;
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     width: 80%;
   }
 `
@@ -47,12 +47,12 @@ const Third = styled.div`
   width: 30%;
   height: 75%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   border-top: 1px solid black;
 
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     border: none;
     width: 85%;
   }
@@ -65,7 +65,7 @@ const MomImage = styled.img`
   opacity: ${props => props.opacity};
   border-radius: ${props => props.borderRadius};
 
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     min-width: 100px;
   }
 `
@@ -73,16 +73,14 @@ const MomImage = styled.img`
 const FirstTextDiv = styled.div`
   display: flex;
   justify-content: flex-end;
-  height: 40%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     justify-content: center;
   }
 `
 
 const TextTwoDiv = styled.div`
   width: 100%;
-  height: 60%;
 `
 
 const TextThreeDiv = styled.div`
@@ -97,49 +95,56 @@ const FourthDiv = styled.div`
 
 const TextOne = styled.p`
   font-size: 38px;
+  margin: 0;
   text-align: right;
   color: #4c4c4c;
   font-weight 300;
-  font-family: Forum;
-  @media (max-width: 768px){
+  font-family: Neoteric Bold;
+  @media (max-width: 880px){
     margin: 30px 0;
   }
 `
 
 const TextFour = styled.p`
   font-size: 24px;
+  margin: 0;
   text-align: left;
   color: #4c4c4c;
   font-weight 700;
   font-style: italic;
   width: 85%;
   font-family: Lato;
-  @media (max-width: 768px){
+  @media (max-width: 880px){
       margin: 30px 0;
   }
 `
 
 const TextThree = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   color: #4c4c4c;
   font-weight 300;
   width: 95%;
-  font-family: Montserrat;
-  @media (max-width: 768px){
+  font-family: Helvetica;
+  @media (max-width: 880px){
       margin: 30px 0 0 0;
   }
 `
 
 const TextTwo = styled.p`
-  font-size: 20px;
+  font-size: 22px;
   text-align: right;
   color: #4c4c4c;
   font-weight: 300;
-  font-family: Montserrat;
-  @media (max-width: 768px) {
+  font-family: Helvetica;
+  font-family: Neoteric;
+  @media (max-width: 880px) {
     margin: 0 0 30px 0;
     text-align: center;
   }
+`
+
+const HelloSpan = styled.span`
+  font-size: 30px;
 `
 
 class App extends React.Component {
@@ -154,7 +159,7 @@ class App extends React.Component {
           </FirstTextDiv>
           <TextTwoDiv>
             <TextTwo>
-              Hello! Cheri here.
+              <HelloSpan>Hello! Cheri here.</HelloSpan>
               <br />
               Campfire Connoisseur.
               <br />
@@ -172,14 +177,17 @@ class App extends React.Component {
         <Third>
           <TextThreeDiv>
             <TextThree>
-              Currently, I serve as Operations Director for a Fortune 500 company, and
-              spend my nights and weekends dreaming up beautiful celebrations.
+              For years, I have coordinated weddings and special events (both corporate
+              and private). I always wake up the next morning thinking – wow, how great
+              was that! Clients are complimentary of my attention to detail and energy in
+              bringing planning to life. We start out on a very professional level and by
+              the time the actual event rolls around, we’ve become friends.
             </TextThree>
           </TextThreeDiv>
           <FourthDiv>
             <TextFour>
-              At the end of the day, my goal is to help you marry your best friend in the
-              most stress-free way imaginable.
+              Taking people’s details and dreams and making them a reality is my business,
+              and I’m passionate about it.
             </TextFour>
           </FourthDiv>
         </Third>
