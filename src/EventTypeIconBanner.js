@@ -52,7 +52,7 @@ class EventTypeIconBanner extends React.Component {
   render() {
     const icons = [
       { image: dress, text: "Weddings" },
-      { image: ornament, text: "Holiday Parties" },
+      { image: ornament, text: "Parties" },
       { image: gradcap, text: "Open Houses" },
       { image: racer, text: "Fundraisers" }
     ];

@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import './NavBar.css'
-import Logo from './images/origLogo.png'
+import React from "react";
+import styled from "styled-components";
+import "./NavBar.css";
+import Logo from "./images/origLogo.png";
 
 const MobileNav = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const MobileNav = styled.div`
   @media (max-width: 768px) {
     width: 50%;
   }
-`
+`;
 
 const ImageDiv = styled.div`
   width: 90%;
@@ -23,19 +23,19 @@ const ImageDiv = styled.div`
   margin: 0 auto;
   justify-content: center;
   margin-top: 50px;
-`
+`;
 
 const LogoWrap = styled.div`
   height: 300px;
   width: 300px;
   border-radius: 50%;
   background-color: white;
-`
+`;
 
 const AdjustedImage = styled.img`
   width: 100%;
   border-radius: 50%;
-`
+`;
 
 const LinkDiv = styled.div`
   width: 100%;
@@ -43,13 +43,13 @@ const LinkDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 50%;
-`
+`;
 
 const StyledMenuXSpan = styled.span`
   width: 22px;
   height: 2px;
   background-color: black;
-`
+`;
 
 const WrapperDiv = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ const WrapperDiv = styled.div`
   align-items: center;
   height: 50px;
   width: 25%;
-`
+`;
 
 const MobileWrapperDiv = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ const MobileWrapperDiv = styled.div`
     cursor: pointer;
     transform: scale(1.1, 1.1);
   }
-`
+`;
 
 const WrapperDesktopDiv = styled.div`
   display: flex;
@@ -80,7 +80,7 @@ const WrapperDesktopDiv = styled.div`
   height: 50px;
   width: ${props => props.width};
   border-right: ${props => props.borderRight};
-`
+`;
 
 const DesktopNav = styled.div`
   display: flex;
@@ -92,7 +92,7 @@ const DesktopNav = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 const MobileNavButton = styled.div`
   display: flex;
@@ -112,7 +112,7 @@ const MobileNavButton = styled.div`
 
   @media (max-width: 768px) {
   }
-`
+`;
 
 const XDiv = styled.div`
   display: flex;
@@ -128,11 +128,11 @@ const XDiv = styled.div`
     cursor: pointer;
     transform: scale(1.1, 1.1);
   }
-`
+`;
 
 const Text = styled.h1`
   font-weight: 100;
-`
+`;
 
 const SmallText = styled.h1`
   font-weight: 100;
@@ -140,42 +140,49 @@ const SmallText = styled.h1`
   &:hover {
     border-bottom: 1px solid black;
   }
-`
+`;
 
 class NavBar extends React.Component {
   state = {
     mobileOpen: true,
     navLinks: [
-      { anchor: 'aboutMe', name: 'About' },
-      { anchor: 'testimonials', name: 'Gratitude' },
-      { anchor: 'services', name: 'Services' },
-      { anchor: 'contact', name: 'Contact' }
+      { anchor: "aboutMe", name: "About" },
+      { anchor: "testimonials", name: "Gratitude" },
+      { anchor: "services", name: "Services" },
+      { anchor: "contact", name: "Contact" },
+      { anchor: "Journal", name: "Journal" }
     ]
-  }
+  };
 
   renderNavLinks() {
     return this.state.navLinks.map((s, i) => {
       return (
         <MobileWrapperDiv
-          onClick={() => this.props.navFunc(s.anchor)}
+          onClick={
+            s.anchor === "Journal"
+              ? () => alert("* LeVeive Events Journal Coming Soon *")
+              : () => this.props.navFunc(s.anchor)
+          }
           key={i * Math.random()}
         >
           <SmallText>{s.name}</SmallText>
         </MobileWrapperDiv>
-      )
-    })
+      );
+    });
   }
 
   render() {
     return (
-      <MobileNav className={this.state.mobileOpen ? 'mobileNav showMobile' : 'mobileNav'}>
+      <MobileNav
+        className={this.state.mobileOpen ? "mobileNav showMobile" : "mobileNav"}
+      >
         <ImageDiv>
           <AdjustedImage src={Logo} />
         </ImageDiv>
         <LinkDiv>{this.renderNavLinks()}</LinkDiv>
       </MobileNav>
-    )
+    );
   }
 }
 
-export default NavBar
+export default NavBar;
