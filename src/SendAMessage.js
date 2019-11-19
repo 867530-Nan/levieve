@@ -40,17 +40,6 @@ class SendAMesasge extends React.Component {
   state = { hover: false };
 
   render() {
-    const options = {
-      accessToken: "access...",
-      clientId: "client...",
-      get: "user", // popular, user
-      locationId: null,
-      resolution: "standard_resolution", // thumbnail, low_resolution, standard_resolution
-      sortBy: "none", // none, least-commented, least-liked, least-recent, most-commented, most-liked, most-recent, random
-      tagName: null,
-      userId: 123
-    };
-
     return (
       <PageWrap
         onClick={() => this.props.navFunc("contact")}
