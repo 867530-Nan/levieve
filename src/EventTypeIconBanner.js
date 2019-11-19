@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import dress from './images/dress.png'
-import ornament from './images/ornament3.png'
-import gradcap from './images/gradcap.png'
-import racer from './images/finish.png'
+import React from "react";
+import styled from "styled-components";
+import dress from "./images/dress.png";
+import ornament from "./images/ornament3.png";
+import gradcap from "./images/gradcap.png";
+import racer from "./images/finish.png";
 
 const PageWrap = styled.div`
   min-height: 300px;
@@ -11,9 +11,9 @@ const PageWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #eaeaea;
+  background-color: #5d654a;
   padding: 50px 0;
-`
+`;
 
 const SingleIcon = styled.div`
   width: 30%;
@@ -26,19 +26,19 @@ const SingleIcon = styled.div`
   align-items: center;
   box-shadow: 0px 0px 8px -4px #553d4b;
   background-color: white;
-  border-radius: 5px;
-`
+  border-radius: 2px;
+`;
 
 const ImageWrap = styled.div`
   width: 25%;
   display: flex;
   justify-content: center;
-`
+`;
 
 const IconImage = styled.img`
   width: 100%;
   max-width: 80px;
-`
+`;
 
 const IconText = styled.h1`
   font-family: Neoteric;
@@ -46,16 +46,16 @@ const IconText = styled.h1`
   text-align: center;
 
   width: 75%;
-`
+`;
 
 class EventTypeIconBanner extends React.Component {
   render() {
     const icons = [
-      { image: dress, text: 'Weddings' },
-      { image: ornament, text: 'Holiday Parties' },
-      { image: gradcap, text: 'Graduations' },
-      { image: racer, text: 'Run / Walk\nFundraisers' }
-    ]
+      { image: dress, text: "Weddings" },
+      { image: ornament, text: "Holiday Parties" },
+      { image: gradcap, text: "Graduations" },
+      { image: racer, text: "Run / Walk\nFundraisers" }
+    ];
     return (
       <PageWrap>
         {icons.map(s => {
@@ -66,11 +66,11 @@ class EventTypeIconBanner extends React.Component {
               </ImageWrap>
               <IconText>{s.text}</IconText>
             </SingleIcon>
-          )
+          );
         })}
       </PageWrap>
-    )
+    );
   }
 }
 
-export default EventTypeIconBanner
+export default EventTypeIconBanner;

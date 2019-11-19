@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import './cForm.css'
-import styled from 'styled-components'
-import image from './images/beautiful-beauty-bouquet-2472858.jpg'
-import { media } from './GenericStyledComponents'
-import { Form } from 'semantic-ui-react'
-import LVStyleGuide from './LVStyleGuide'
+import React, { Component } from "react";
+import "./cForm.css";
+import styled from "styled-components";
+import image from "./images/beautiful-beauty-bouquet-2472858.jpg";
+import { media } from "./GenericStyledComponents";
+import { Form } from "semantic-ui-react";
+import LVStyleGuide from "./LVStyleGuide";
 
 const PageWrap = styled.div`
   display: flex;
@@ -28,32 +28,32 @@ const PageWrap = styled.div`
   @media (max-width: 850px) {
     background-size: cover;
   }
-`
+`;
 
 const WhiteBox = styled.div`
   width: 75%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0 5px 0 0;
-`
+`;
 
 const ContactForm = styled(Form)`
   font-family: ${LVStyleGuide.font.family.monoFur};
-`
+`;
 
 const FormDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
-`
+`;
 
 const FormInput = styled.input`
   height: 60px;
   width: 100%;
-`
+`;
 
 const FormEmail = styled.input`
   width: 100%;
   height: 60px;
-`
+`;
 
 const InputWrap = styled.div`
   width: 45%;
@@ -61,14 +61,14 @@ const InputWrap = styled.div`
   min-height: 50px;
   min-width: 250px;
   height: 60px;
-`
+`;
 
 const EmailWrap = styled.div`
   width: 45%;
   min-width: 250px;
   min-height: 50px;
   margin: 15px;
-`
+`;
 
 const TextAreaWrap = styled.div`
   width: 100%;
@@ -77,13 +77,13 @@ const TextAreaWrap = styled.div`
   min-width: 250px;
   height: 60px;
   z-index: 1000;
-`
+`;
 
 const FormTextArea = styled.textarea`
   height: 60px;
   width: 100%;
   resize: vertical;
-`
+`;
 
 const SubmitButton = styled.div`
   width: 150px;
@@ -105,7 +105,7 @@ const SubmitButton = styled.div`
   ${media.tablet`
     width: 75%
   `}
-`
+`;
 
 // const ButtonSection = styled.div`
 //   display: flex;
@@ -124,7 +124,11 @@ const BigText = styled.h1`
   font-size: 40px;
   font-family: Neoteric;
   font-weight: 100;
-`
+
+  @media (max-width: 768px) {
+    font-weight: 600;
+  }
+`;
 
 const LeSpan = styled.p`
   font-size: 24px;
@@ -132,7 +136,7 @@ const LeSpan = styled.p`
   font-family: Neoteric;
   font-weight: 100;
   margin: 0 0 0 15px;
-`
+`;
 
 const Anchor = styled.a`
   text-decoration: none;
@@ -141,7 +145,7 @@ const Anchor = styled.a`
   &:hover {
     cursor: pointer:
   }
-`
+`;
 
 const EmailResWrap = styled.div`
   height: 100px;
@@ -155,83 +159,83 @@ const EmailResWrap = styled.div`
   left: 25%;
   background-color: ${props => props.backgroundColor};
   border-radius: 0 0 5px 5px;
-`
+`;
 const EmailText = styled.p`
   text-align: center;
   font-weight: 700;
   color: ${props => props.color};
-`
+`;
 
 class CommentForm extends Component {
   state = {
-    success: '',
+    success: "",
     emailRes: false,
-    email: '',
-    firstName: '',
-    lastName: '',
-    message: ''
-  }
+    email: "",
+    firstName: "",
+    lastName: "",
+    message: ""
+  };
 
   componentDidUpdate(nP, nS) {
     if (this.state.emailRes) {
       setTimeout(() => {
         if (this.state.success) {
-          console.log('up top')
+          console.log("up top");
           this.setState(
             {
-              email: '',
-              firstName: '',
-              lastName: '',
-              message: '',
+              email: "",
+              firstName: "",
+              lastName: "",
+              message: "",
               emailRes: false,
-              success: ''
+              success: ""
             },
             this.forceIt
-          )
+          );
         } else {
-          console.log('down below')
-          this.setState({ emailRes: false, success: '' })
+          console.log("down below");
+          this.setState({ emailRes: false, success: "" });
         }
-      }, 3000)
+      }, 3000);
     }
   }
   forceIt = () => {
-    this.forceUpdate()
-  }
+    this.forceUpdate();
+  };
   handleFormSubmit = event => {
-    console.log('here')
-    event.preventDefault()
+    console.log("here");
+    event.preventDefault();
     window.emailjs
-      .send('levieveevents', 'levieve_events', {
-        from_name: this.state.firstName + ' ' + this.state.lastName,
+      .send("levieveevents", "levieve_events", {
+        from_name: this.state.firstName + " " + this.state.lastName,
         message_html: this.state.message,
         reply_to: this.state.email
       })
       .then(
         response => {
-          this.setState({ emailRes: true, success: true })
+          this.setState({ emailRes: true, success: true });
         },
         err => {
-          console.log('FAILED. error=', err)
-          this.setState({ emailRes: true, success: false })
+          console.log("FAILED. error=", err);
+          this.setState({ emailRes: true, success: false });
         }
-      )
-  }
+      );
+  };
   handleFormChange = e => {
-    const { id, value } = e.target
-    this.setState({ [id]: value })
-  }
+    const { id, value } = e.target;
+    this.setState({ [id]: value });
+  };
   showMessage = () => {
     return (
-      <EmailResWrap backgroundColor={this.state.success ? '#435840' : 'red'}>
-        <EmailText color={this.state.success ? 'white' : 'black'}>
+      <EmailResWrap backgroundColor={this.state.success ? "#435840" : "red"}>
+        <EmailText color={this.state.success ? "white" : "black"}>
           {this.state.success
             ? `Thank you ${this.state.firstName} for the message, I'll respond to you within 24 Hours`
-            : 'An error occurred with the web-server, please submit form again.'}
+            : "An error occurred with the web-server, please submit form again."}
         </EmailText>
       </EmailResWrap>
-    )
-  }
+    );
+  };
   render() {
     return (
       <PageWrap url={image}>
@@ -242,7 +246,7 @@ class CommentForm extends Component {
             Send me a message below.
             <br />
           </BigText>
-          <Anchor href='mailto:levieveevents@gmail.com'>
+          <Anchor href="mailto:levieveevents@gmail.com">
             <LeSpan> * levieveevents.com </LeSpan>
           </Anchor>
           <ContactForm>
@@ -251,38 +255,38 @@ class CommentForm extends Component {
                 <FormInput
                   fluid
                   onChange={this.handleFormChange}
-                  className='commentFormPlaceholder'
-                  id='firstName'
+                  className="commentFormPlaceholder"
+                  id="firstName"
                   value={this.state.firstName}
-                  placeholder='First Name'
+                  placeholder="First Name"
                 />
               </InputWrap>
               <InputWrap>
                 <FormInput
                   fluid
                   onChange={this.handleFormChange}
-                  className='commentFormPlaceholder'
-                  id='lastName'
+                  className="commentFormPlaceholder"
+                  id="lastName"
                   value={this.state.lastName}
-                  placeholder='Last Name'
+                  placeholder="Last Name"
                 />
               </InputWrap>
               <EmailWrap>
                 <FormEmail
                   onChange={this.handleFormChange}
-                  className='commentFormPlaceholder'
-                  id='email'
+                  className="commentFormPlaceholder"
+                  id="email"
                   value={this.state.email}
-                  placeholder='brad.pitt@email.com'
+                  placeholder="brad.pitt@email.com"
                 />
               </EmailWrap>
               <TextAreaWrap>
                 <FormTextArea
                   onChange={this.handleFormChange}
-                  className='commentFormPlaceholder'
-                  id='message'
+                  className="commentFormPlaceholder"
+                  id="message"
                   value={this.state.message}
-                  placeholder='Write me a message..'
+                  placeholder="Write me a message.."
                 />
               </TextAreaWrap>
             </FormDiv>
@@ -290,8 +294,8 @@ class CommentForm extends Component {
           <SubmitButton onClick={this.handleFormSubmit}>Submit</SubmitButton>
         </WhiteBox>
       </PageWrap>
-    )
+    );
   }
 }
 
-export default CommentForm
+export default CommentForm;

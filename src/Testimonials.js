@@ -1,39 +1,39 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import './testimonials.css'
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import "./testimonials.css";
 const PurpDiv = styled.div`
   height: 900px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-`
+`;
 
 const TopDiv = styled.div`
   display: flex;
   height: 25%;
-  background-color: #553e4c;
+  background-color: #553e4ceb;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const FirstCombo = styled.div`
   &:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;
   }
-`
+`;
 
 const Arrow = styled.h1`
   color: white;
   font-size: 45px;
   font-weight: 100;
-`
+`;
 
 const TopComboWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-`
+`;
 
 const TopDivText = styled.h1`
   font-size: 42px;
@@ -46,7 +46,7 @@ const TopDivText = styled.h1`
   @media (max-width: 550px) {
     font-size: 28px;
   }
-`
+`;
 
 const TopDivBottomText = styled.p`
   font-family: Neoteric;
@@ -54,14 +54,14 @@ const TopDivBottomText = styled.p`
   margin: 0;
   font-weight: 300;
   text-align: center;
-`
+`;
 
 const CardLine = styled.div`
-  background-color: #553e4c;
+  background-color: #553e4ceb;
   width: 30%;
   height: 1px;
   margin: 0 auto;
-`
+`;
 
 const slideAnimation = props => keyframes`
   from {
@@ -71,10 +71,10 @@ const slideAnimation = props => keyframes`
   to {
     transform: translate3d(-${props.toNumber}px, 0, 0);
   }
-`
+`;
 
 const BottomDiv = styled.div`
-  background: linear-gradient(180deg, #553e4c 10%, #87a084 10%);
+  background: linear-gradient(180deg, #553e4ceb 10%, #87a084 10%);
 
   height: 75%;
   display: flex;
@@ -82,7 +82,7 @@ const BottomDiv = styled.div`
   width: ${props => props.width}px;
   animation: ${props => slideAnimation(props)} 1s linear;
   transform: translate3d(-${props => props.translateNumber}px, 0, 0);
-`
+`;
 
 const CardWrap = styled.div`
   display: flex;
@@ -95,7 +95,7 @@ const CardWrap = styled.div`
   @media (max-width: 450px) {
     margin: 0 auto;
   }
-`
+`;
 
 const SingleCard = styled.div`
   background-color: white;
@@ -107,13 +107,13 @@ const SingleCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const CardFirstText = styled.h1`
   text-align: center;
   font-weight: 500;
   font-family: Neoteric;
-`
+`;
 
 const CardSecondText = styled.h4`
   text-align: center;
@@ -123,13 +123,13 @@ const CardSecondText = styled.h4`
   min-height: 200px;
   display: flex;
   align-items: center;
-`
+`;
 
 const CardDateLocation = styled.h4`
   font-weight: 500;
   font-family: Helvetica;
   font-style: italic;
-`
+`;
 
 class Testimonials extends React.Component {
   state = {
@@ -138,58 +138,58 @@ class Testimonials extends React.Component {
     translateNumber: 0,
     testCards: [
       {
-        name: 'Maddie + Ethan',
+        name: "Maddie + Ethan",
         text:
-          'Even though I hadn’t gotten the chance to meet with Cheri before my wedding, she knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life. I knew I could trust Cheri to get everything done and without any questions. My wedding day was absolutely perfect, thanks to Cheri.',
-        secondaryText: 'Silverwood Park - Minneapolis'
+          "Even though I hadn’t gotten the chance to meet with Cheri before my wedding, she knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life. I knew I could trust Cheri to get everything done and without any questions. My wedding day was absolutely perfect, thanks to Cheri.",
+        secondaryText: "Silverwood Park - Minneapolis"
       },
       {
-        name: 'Ellie + Chris',
+        name: "Ellie + Chris",
         text:
-          'Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.',
-        secondaryText: 'The Graduate Hotel'
+          "Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.",
+        secondaryText: "The Graduate Hotel"
       },
       {
-        name: 'Jeanne',
+        name: "Jeanne",
         text:
-          'Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride I was able to relax and enjoy every moment of the memorable day.',
-        secondaryText: 'Silverwood Park - Minneapolis'
+          "Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride I was able to relax and enjoy every moment of the memorable day.",
+        secondaryText: "Silverwood Park - Minneapolis"
       },
       {
-        name: 'Meghan + Cathy',
+        name: "Meghan + Cathy",
         text:
-          'We are so excited to learn that Cheri had gotten into the wedding / event planning space. She worked with us years ago at the start of what was to become Women Run the Cities Race in the Twin Cities and was a key player in the organization and it is operations which helped propel the race into record setting attendance. She is highly organized, strategic and cool under pressure – perfect qualities to lead LeVieve Events! Congrats Cheri',
-        secondaryText: 'Women Run the Cities - Minneapolis'
+          "We are so excited to learn that Cheri had gotten into the wedding / event planning space. She worked with us years ago at the start of what was to become Women Run the Cities Race in the Twin Cities and was a key player in the organization and it is operations which helped propel the race into record setting attendance. She is highly organized, strategic and cool under pressure – perfect qualities to lead LeVieve Events! Congrats Cheri",
+        secondaryText: "Women Run the Cities - Minneapolis"
       },
       {
-        name: 'Renee',
+        name: "Renee",
         text:
-          'I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life. I greatly appreciated Cheri’s professionalism, energy and dependability during those planning months and especially on the day of the event.',
-        secondaryText: 'October 2019 - East Town Ballroom'
+          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life. I greatly appreciated Cheri’s professionalism, energy and dependability during those planning months and especially on the day of the event.",
+        secondaryText: "October 2019 - East Town Ballroom"
       }
     ],
-    scroller: '',
+    scroller: "",
     scrollNumber: 0,
     cardWidth: window.innerWidth * 0.5,
     cardMargin: window.innerWidth * 0.1
-  }
+  };
 
   componentDidMount() {
-    console.log(window.innerWidth)
-    const gotIt = document.getElementById('bottomScroller')
+    console.log(window.innerWidth);
+    const gotIt = document.getElementById("bottomScroller");
     this.myTimer = setTimeout(() => {
-      this.leftClick()
-    }, 8500)
+      this.rightClick();
+    }, 8500);
     if (window.innerWidth < 850) {
-      this.setState({ scroller: gotIt, cardWidth: window.innerWidth })
+      this.setState({ scroller: gotIt, cardWidth: window.innerWidth });
     } else {
-      this.setState({ scroller: gotIt, cardWidth: window.innerWidth * 0.5 })
+      this.setState({ scroller: gotIt, cardWidth: window.innerWidth * 0.5 });
     }
   }
 
   rightClick = () => {
-    clearTimeout(this.myTimer)
-    const gotIt = document.getElementById('bottomScroller')
+    clearTimeout(this.myTimer);
+    const gotIt = document.getElementById("bottomScroller");
     if (this.state.scrollNumber !== this.state.testCards.length - 2) {
       // gotIt.classList.add('slideLeft')
 
@@ -198,27 +198,27 @@ class Testimonials extends React.Component {
           scrollNumber: s.scrollNumber + 1,
           fromNumber: s.toNumber,
           toNumber: s.toNumber + s.cardWidth
-        }
-      })
+        };
+      });
       setTimeout(() => {
         this.setState(s => {
-          return { translateNumber: s.translateNumber + s.cardWidth }
-        })
-      }, 1000)
+          return { translateNumber: s.translateNumber + s.cardWidth };
+        });
+      }, 1000);
       // setTimeout(() => {
       // }, 1000)
     }
-  }
+  };
 
   leftClick = () => {
-    clearTimeout(this.myTimer)
-    const gotIt = document.getElementById('bottomScroller')
+    clearTimeout(this.myTimer);
+    const gotIt = document.getElementById("bottomScroller");
     if (
       this.state.scrollNumber !== 0 &&
       this.state.testCards.length > 2 &&
       this.state.scrollNumber < this.state.testCards.length - 1
     ) {
-      console.log('cool stuf')
+      console.log("cool stuf");
       // gotIt.classList.add('slideRight')
       // setTimeout(() => {
       this.setState(s => {
@@ -226,18 +226,18 @@ class Testimonials extends React.Component {
           scrollNumber: s.scrollNumber - 1,
           fromNumber: s.toNumber,
           toNumber: s.toNumber - s.cardWidth
-        }
-      })
+        };
+      });
       setTimeout(() => {
         this.setState(s => {
           return {
             translateNumber: s.translateNumber - s.cardWidth
-          }
-        })
-      }, 1000)
+          };
+        });
+      }, 1000);
       // }, 1000)
     }
-  }
+  };
 
   render() {
     return (
@@ -255,11 +255,11 @@ class Testimonials extends React.Component {
           </FirstCombo>
         </TopDiv>
         <BottomDiv
-          id='bottomScroller'
+          id="bottomScroller"
           width={
             this.state.testCards.length > 2
               ? this.state.testCards.length * this.state.cardWidth
-              : '100%'
+              : "100%"
           }
           scrollNumber={this.state.scrollNumber * this.state.cardWidth}
           fromNumber={this.state.fromNumber}
@@ -269,7 +269,7 @@ class Testimonials extends React.Component {
           {this.state.testCards.map((s, i) => {
             return (
               <CardWrap
-                marginLeft={i === 0 ? '100px' : null}
+                marginLeft={i === 0 ? "100px" : null}
                 width={this.state.cardWidth}
               >
                 <SingleCard cardMargin={this.state.cardMargin * 0.5}>
@@ -280,12 +280,12 @@ class Testimonials extends React.Component {
                   <CardDateLocation>{s.secondaryText}</CardDateLocation>
                 </SingleCard>
               </CardWrap>
-            )
+            );
           })}
         </BottomDiv>
       </PurpDiv>
-    )
+    );
   }
 }
 
-export default Testimonials
+export default Testimonials;

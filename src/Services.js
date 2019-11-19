@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+
+const PageWrap = styled.div`
+  height: 900px;
+  background-color: #637877;
+`;
 
 class Services extends React.Component {
   render() {
-    return <div></div>
+    return <PageWrap></PageWrap>;
   }
 }
 
-export default Services
+export default Services;

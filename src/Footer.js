@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import JSON from '../package.json'
+import React from "react";
+import styled from "styled-components";
+import JSON from "../package.json";
 
 const PageWrap = styled.div`
   display: flex;
@@ -9,34 +9,45 @@ const PageWrap = styled.div`
   align-items: center;
   height: 200px;
   background-color: #435840;
-`
+`;
 
 const Line = styled.div`
   height: 1px;
   width: 75%;
   background-color: white;
-`
+`;
 
 const Title = styled.h1`
   font-family: Neoteric;
+  text-align: center;
   font-weight: 100;
   color: white;
-  font-size: 30px;
-`
+  font-size: 26px;
+  margin: 0;
+`;
+
+const FTitle = styled.h1`
+  font-family: Neoteric;
+  margin: 0;
+  text-align: center;
+  font-weight: 100;
+  color: white;
+  font-size: 24px;
+`;
 
 const SmallTitle = styled.span`
   font-family: Lato;
   font-weight: 100;
   color: white;
   font-size: 22px;
-`
+`;
 
 const Version = styled.h1`
   font-family: Lato;
   font-weight: 100;
   color: white;
   font-size: 16px;
-`
+`;
 
 const Arrow = styled.div`
   font-size: 30px;
@@ -46,29 +57,34 @@ const Arrow = styled.div`
     cursor: pointer;
     transform: scale(1.05, 1.05);
   }
-`
+`;
 
-const SpanTime = styled.span`
-  font-family: Lato;
+const BL = styled.h3`
+  font-family: Neoteric;
   font-size: 20px;
   font-weight: 400;
-`
+  margin: 0;
+  color: white;
+`;
 
 class Footer extends React.Component {
   render() {
     return (
       <PageWrap>
-        <Line />
-        <Title>
-          LeVieve Events <SmallTitle>&#169; 2019</SmallTitle>
-        </Title>
-        <Arrow onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}>
+        <Arrow
+          onClick={() => window.scroll({ top: 0, left: 0, behavior: "smooth" })}
+        >
           &#8593;
         </Arrow>
-        <Version>v{JSON.version}</Version>
+        <FTitle>Twin Cities, MN</FTitle>
+        <Title>
+          Believe ~ LeVieve
+          <br />
+          <SmallTitle>&#169; 2019</SmallTitle>
+        </Title>
       </PageWrap>
-    )
+    );
   }
 }
 
-export default Footer
+export default Footer;

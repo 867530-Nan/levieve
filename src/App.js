@@ -1,48 +1,50 @@
-import React from 'react'
-import './App.css'
-import styled from 'styled-components'
-import NavBar from './NavBar'
-import Hero from './Hero'
-import Services from './Services'
-import Contact from './Contact'
-import AboutMe from './AboutMe'
-import Testimonials from './Testimonials'
-import EventTypeIconBanner from './EventTypeIconBanner'
-import CommentForm from './CommentForm'
-import Footer from './Footer'
+import React from "react";
+import "./App.css";
+import styled from "styled-components";
+import NavBar from "./NavBar";
+import Hero from "./Hero";
+import Services from "./Services";
+import Contact from "./Contact";
+import AboutMe from "./AboutMe";
+import Testimonials from "./Testimonials";
+import EventTypeIconBanner from "./EventTypeIconBanner";
+import CommentForm from "./CommentForm";
+import Footer from "./Footer";
+import SendAMessage from "./SendAMessage";
 
-const PageWrap = styled.div`
-  background-color: black;
-`
+const PageWrap = styled.div``;
 
 class App extends React.Component {
-  state = {}
+  state = {};
 
   navFunc = s => {
-    document.getElementById(s).scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+    document
+      .getElementById(s)
+      .scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   render() {
     return (
       <PageWrap>
         <Hero navFunc={this.navFunc} />
         <EventTypeIconBanner />
-        <span id='aboutMe'>
+        <span id="aboutMe">
           <AboutMe />
         </span>
-        <span id='testimonials'>
+        <span id="testimonials">
           <Testimonials />
         </span>
-        <span id='services'>
+        <SendAMessage navFunc={this.navFunc} />
+        <span id="services">
           <Services />
         </span>
-        <span id='contact'>
+        <span id="contact">
           <CommentForm />
         </span>
         <Footer />
       </PageWrap>
-    )
+    );
   }
 }
 
-export default App
+export default App;
