@@ -1,25 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import dress from "./images/dress.png";
-import ornament from "./images/ornament3.png";
-import gradcap from "./images/gradcap.png";
+import care from "./images/care.png";
+import toast from "./images/toast.png";
+import rings from "./images/engagement.png";
+import gradcap from "./images/graduation-cap.png";
 import racer from "./images/finish.png";
+import funds from "./images/business.png";
 
 const PageWrap = styled.div`
-  min-height: 300px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #5d654a;
-  padding: 50px 0;
+  background-color: #758972;
 `;
 
 const SingleIcon = styled.div`
-  width: 30%;
-  min-width: 300px;
-  max-width: 450px;
-  min-height: 150px;
+  width: 33%;
+  height: 100px;
+  max-width: 441px;
   margin: 10px 20px;
   display: flex;
   justify-content: center;
@@ -33,6 +32,7 @@ const ImageWrap = styled.div`
   width: 25%;
   display: flex;
   justify-content: center;
+  max-width 50px; 
 `;
 
 const IconImage = styled.img`
@@ -44,17 +44,19 @@ const IconText = styled.h1`
   font-family: Neoteric;
   white-space: pre;
   text-align: center;
-
+  font-size: 24px;
   width: 75%;
 `;
 
 class EventTypeIconBanner extends React.Component {
   render() {
     const icons = [
-      { image: dress, text: "Weddings" },
-      { image: ornament, text: "Parties" },
+      { image: rings, text: "Weddings" },
+      { image: toast, text: "Parties" },
       { image: gradcap, text: "Open Houses" },
-      { image: racer, text: "Fundraisers" }
+      { image: care, text: "Charity Events" },
+      { image: funds, text: "Fundraisers" },
+      { image: racer, text: "Run/Walk Events" }
     ];
     return (
       <PageWrap>

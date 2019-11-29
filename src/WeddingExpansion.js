@@ -4,13 +4,15 @@ import styled from "styled-components";
 const ExpandWrap = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: white;
 `;
 
 const Pricing = styled.h2`
   font-family: Helvetica;
   font-size: 22px;
   font-style: italic;
-  color: white;
+  color: #553e4ceb;
+  font-weight: 300;
   margin-left: 20px;
 `;
 
@@ -19,13 +21,13 @@ const Asterisk = styled.h3`
   font-size: 18px;
   font-style: italic;
   margin-left: 20px;
-  color: white;
+  color: #553e4ceb;
 `;
 
 const Footer = styled.h4`
   font-family: Neoteric;
   font-size: 18px;
-  color: white;
+  color: #553e4ceb;
 `;
 
 const ULMain = styled.ul`
@@ -35,7 +37,7 @@ const ULMain = styled.ul`
 const UL = styled.ul``;
 
 const LI = styled.li`
-  color: white;
+  color: #553e4ceb;
 `;
 
 const WeddingExpansion = () => {
@@ -102,12 +104,12 @@ const WeddingExpansion = () => {
             </LI>
             <LI>
               cheerfully prompt the bride and her escort to take that walk that
-              everyone’s been waiting for. Fluff that beautiful train…all eyes
+              everyone’s been waiting for... fluff that beautiful train…all eyes
               are on you…the love of your life awaits.
             </LI>
           </UL>
           <LI>
-            reception
+            Reception
             <UL>
               <LI>
                 transition guest’s b/t locations as needed; ceremony, cocktail,

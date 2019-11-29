@@ -67,6 +67,19 @@ const BL = styled.h3`
   color: white;
 `;
 
+const Instagram = styled.a`
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: Neoteric
+
+  &:hover {
+    cursor: pointer;
+    font-weight: 700;
+  }
+`;
+
 class Footer extends React.Component {
   render() {
     return (
@@ -77,6 +90,12 @@ class Footer extends React.Component {
           &#8593;
         </Arrow>
         <FTitle>Twin Cities, MN</FTitle>
+        <Instagram
+          target="_blank"
+          href="https://www.instagram.com/levieve_events/"
+        >
+          <span style={{ fontFamily: "Helvetica" }}>@</span>levieve_events
+        </Instagram>
         <Title>
           Believe ~ LeVieve
           <br />

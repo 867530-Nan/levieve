@@ -5,9 +5,10 @@ import EventsExpansion from "./EventsExpansion";
 
 const EventWrap = styled.div`
   flex-direction: column;
+  background-color: white;
   width: 100%;
   &:hover {
-    background-color: #553e4cc7;
+    background-color: #d8d6d6;
     cursor: pointer;
   }
 `;
@@ -19,7 +20,7 @@ const EHD = styled.div`
 `;
 
 const EventHeader = styled.h1`
-  color: white;
+  color: #553e4ceb;
   font-family: helvetica;
   font-weight: 300;
   text-align: center;
@@ -31,7 +32,7 @@ const EventHeader = styled.h1`
 
 const PageWrap = styled.div`
   height: initial;
-  background-color: #553e4ceb;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,18 +43,19 @@ const TopWrap = styled.div``;
 
 const Header = styled.h1`
   font-family: Neoteric;
-  color: white;
+  color: #553e4ceb;
 `;
 
 const TopText = styled.h2`
-  color: white;
+  color: #553e4ceb;
   font-family: Neoteric-Bold;
   text-align: center;
 `;
 const SecText = styled.h2`
-  color: white;
+  color: #553e4ceb;
   font-family: Neoteric;
   font-size: 30px;
+  font-weight: 300;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -112,7 +114,7 @@ class Services extends React.Component {
   render() {
     return (
       <PageWrap>
-        <Header>My Offerings</Header>
+        <Header>Services</Header>
         <hr style={{ width: "50%" }} />
         <SecText>
           Your Dreams + Details = Memorable + Worry-free experience

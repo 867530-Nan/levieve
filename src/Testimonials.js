@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import "./testimonials.css";
 const PurpDiv = styled.div`
-  height: 900px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -10,7 +10,7 @@ const PurpDiv = styled.div`
 
 const TopDiv = styled.div`
   display: flex;
-  height: 25%;
+  height: 30%;
   background-color: #553e4ceb;
   justify-content: center;
   align-items: center;
@@ -74,11 +74,12 @@ const slideAnimation = props => keyframes`
 `;
 
 const BottomDiv = styled.div`
-  background: linear-gradient(180deg, #553e4ceb 10%, #87a084 10%);
+  background: linear-gradient(180deg, #758972 10%, #758972 10%);
 
-  height: 75%;
+  height: 70%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   width: ${props => props.width}px;
   animation: ${props => slideAnimation(props)} 1s linear;
   transform: translate3d(-${props => props.translateNumber}px, 0, 0);
@@ -90,7 +91,7 @@ const CardWrap = styled.div`
   width: ${props => props.width}px;
   margin: 0 50px;
   height: inherit;
-  min-height: 500px;
+  height: 450px;
 
   @media (max-width: 450px) {
     margin: 0 auto;
@@ -165,7 +166,7 @@ class Testimonials extends React.Component {
         name: "Renee",
         text:
           "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life. I greatly appreciated Cheri’s professionalism, energy and dependability during those planning months and especially on the day of the event.",
-        secondaryText: "October 2019 - East Town Ballroom"
+        secondaryText: "The Metropolitan Events Center"
       }
     ],
     scroller: "",
@@ -247,7 +248,7 @@ class Testimonials extends React.Component {
             <Arrow>&#8592;</Arrow>
           </FirstCombo>
           <TopComboWrapper>
-            <TopDivText>GRATITUDE</TopDivText>
+            <TopDivText>Testimonials</TopDivText>
             <TopDivBottomText>FROM PAST EVENTS</TopDivBottomText>
           </TopComboWrapper>
           <FirstCombo onClick={this.rightClick}>

@@ -10,6 +10,7 @@ const Pricing = styled.h2`
   font-family: Helvetica;
   font-size: 22px;
   font-style: italic;
+  font-weight 300;
   color: white;
   margin-left: 20px;
 `;
@@ -28,8 +29,10 @@ const ULMain = styled.ul`
 
 const Footer = styled.h4`
   font-family: Neoteric;
-  font-size: 18px;
+  font-size: 22px;
   color: white;
+  font-weight: 300;
+  text-align: center;
 `;
 
 const MiddleOne = styled.h3`
@@ -52,7 +55,7 @@ const EventsExpansion = () => {
     <ExpandWrap>
       <ULMain>
         <LI>
-          LeVieve Events is a “day-of” event coordinator service. I have years
+          LeVieve Events is a “month-of” event coordinator service. I have years
           of experience in on-site-coordination for events such as:
           <UL>
             <LI>Holiday parties (corporate and private)</LI>
@@ -61,7 +64,6 @@ const EventsExpansion = () => {
             <LI>Graduation open house parties</LI>
             <LI>Block parties</LI>
             <LI>Run/walk events (non-profit fundraisers)</LI>
-            <LI>Progressive dinner parties</LI>
           </UL>
         </LI>
         <MiddleOne>

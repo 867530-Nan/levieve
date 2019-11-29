@@ -34,7 +34,7 @@ class App extends React.Component {
         <span id="testimonials">
           <Testimonials />
         </span>
-        <SendAMessage navFunc={this.navFunc} />
+        {/* <SendAMessage navFunc={this.navFunc} /> */}
         <span id="services">
           <Services />
         </span>

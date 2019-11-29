@@ -180,7 +180,6 @@ class CommentForm extends Component {
     if (this.state.emailRes) {
       setTimeout(() => {
         if (this.state.success) {
-          console.log("up top");
           this.setState(
             {
               email: "",
@@ -277,7 +276,7 @@ class CommentForm extends Component {
                   className="commentFormPlaceholder"
                   id="email"
                   value={this.state.email}
-                  placeholder="brad.pitt@email.com"
+                  placeholder="lets.connect@email.com"
                 />
               </EmailWrap>
               <TextAreaWrap>
