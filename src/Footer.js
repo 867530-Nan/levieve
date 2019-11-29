@@ -8,7 +8,7 @@ const PageWrap = styled.div`
   justify-content: center;
   align-items: center;
   height: 200px;
-  background-color: #435840;
+  background-color: #758972;
 `;
 
 const Line = styled.div`
@@ -21,7 +21,7 @@ const Title = styled.h1`
   font-family: Neoteric;
   text-align: center;
   font-weight: 100;
-  color: white;
+  color: black;
   font-size: 26px;
   margin: 0;
 `;
@@ -31,14 +31,14 @@ const FTitle = styled.h1`
   margin: 0;
   text-align: center;
   font-weight: 100;
-  color: white;
+  color: black;
   font-size: 24px;
 `;
 
 const SmallTitle = styled.span`
   font-family: Lato;
   font-weight: 100;
-  color: white;
+  color: black;
   font-size: 22px;
 `;
 
@@ -51,7 +51,7 @@ const Version = styled.h1`
 
 const Arrow = styled.div`
   font-size: 30px;
-  color: white;
+  color: color;
 
   &:hover {
     cursor: pointer;
@@ -68,7 +68,7 @@ const BL = styled.h3`
 `;
 
 const Instagram = styled.a`
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 24px;
   font-weight: 300;
@@ -96,11 +96,7 @@ class Footer extends React.Component {
         >
           <span style={{ fontFamily: "Helvetica" }}>@</span>levieve_events
         </Instagram>
-        <Title>
-          Believe ~ LeVieve
-          <br />
-          <SmallTitle>&#169; 2019</SmallTitle>
-        </Title>
+        <Title>Believe ~ LeVieve</Title>
       </PageWrap>
     );
   }
