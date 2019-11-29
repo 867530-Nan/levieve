@@ -33,6 +33,7 @@ const ImageWrap = styled.div`
   display: flex;
   justify-content: center;
   max-width 50px; 
+  max-height: 50px;
 `;
 
 const IconImage = styled.img`
