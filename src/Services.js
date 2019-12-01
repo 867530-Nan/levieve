@@ -3,9 +3,37 @@ import styled from "styled-components";
 import WeddingExpansion from "./WeddingExpansion";
 import EventsExpansion from "./EventsExpansion";
 
+const PageWrap = styled.div`
+  height: initial;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      white 20%,
+      white 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        white 20%,
+        white 80%,
+        transparent 80%,
+        transparent
+      )
+      50px 50px,
+    linear-gradient(#553e4c0f 4px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #553e4c0f 4px, transparent 8px) -4px 0;
+  background-color: white;
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const EventWrap = styled.div`
   flex-direction: column;
-  background-color: white;
   width: 100%;
   &:hover {
     background-color: #d8d6d6;
@@ -28,15 +56,6 @@ const EventHeader = styled.h1`
   &:hover {
     cursor: pointer;
   }
-`;
-
-const PageWrap = styled.div`
-  height: initial;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 
 const TopWrap = styled.div``;

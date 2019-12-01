@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ExpandWrap = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: white;
 `;
 
 const Pricing = styled.h2`
@@ -11,16 +12,18 @@ const Pricing = styled.h2`
   font-size: 22px;
   font-style: italic;
   font-weight 300;
-  color: white;
+  color: #553e4ceb;
   margin-left: 20px;
 `;
 
 const Asterisk = styled.h3`
   font-family: helvetica;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
-  color: white;
+  margin: 0;
+  text-indent: 20px;
   margin-left: 20px;
+  color: #553e4ceb;
 `;
 
 const ULMain = styled.ul`
@@ -30,7 +33,7 @@ const ULMain = styled.ul`
 const Footer = styled.h4`
   font-family: Neoteric;
   font-size: 22px;
-  color: white;
+  color: #553e4ceb;
   font-weight: 300;
   text-align: center;
 `;
@@ -41,13 +44,13 @@ const MiddleOne = styled.h3`
   font-weight: 100;
   margin: 40px 0;
 
-  color: white;
+  color: #553e4ceb;
 `;
 
 const UL = styled.ul``;
 
 const LI = styled.li`
-  color: white;
+  color: #553e4ceb;
 `;
 
 const EventsExpansion = () => {

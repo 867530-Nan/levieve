@@ -4,7 +4,6 @@ import styled from "styled-components";
 const ExpandWrap = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: white;
 `;
 
 const Pricing = styled.h2`
@@ -18,16 +17,20 @@ const Pricing = styled.h2`
 
 const Asterisk = styled.h3`
   font-family: helvetica;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
+  margin: 0;
+  text-indent: 20px;
   margin-left: 20px;
   color: #553e4ceb;
 `;
 
 const Footer = styled.h4`
   font-family: Neoteric;
-  font-size: 18px;
+  font-size: 22px;
   color: #553e4ceb;
+  font-weight: 300;
+  text-align: center;
 `;
 
 const ULMain = styled.ul`

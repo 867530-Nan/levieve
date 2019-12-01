@@ -19,6 +19,7 @@ const SingleIcon = styled.div`
   width: 33%;
   height: 100px;
   max-width: 441px;
+  min-width: 250px;
   margin: 10px 20px;
   display: flex;
   justify-content: center;

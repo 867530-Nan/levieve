@@ -90,11 +90,11 @@ const CardWrap = styled.div`
   justify-content: center;
   width: ${props => props.width}px;
   margin: 0 50px;
-  height: inherit;
   height: 450px;
 
   @media (max-width: 450px) {
     margin: 0 auto;
+    width: initial;
   }
 `;
 
