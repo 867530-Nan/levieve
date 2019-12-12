@@ -74,7 +74,7 @@ const slideAnimation = props => keyframes`
 `;
 
 const BottomDiv = styled.div`
-  background: linear-gradient(180deg, #758972 10%, #758972 10%);
+  background: linear-gradient(180deg, #f6f7f5 10%, #f6f7f5 10%);
 
   height: 70%;
   display: flex;
@@ -103,7 +103,7 @@ const SingleCard = styled.div`
   box-shadow: 0 0px 15px -7px black;
   width: 100%;
   border-radius: 3px;
-  max-width: 450px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,7 +119,7 @@ const CardFirstText = styled.h1`
 const CardSecondText = styled.h4`
   text-align: center;
   font-family: Helvetica;
-  font-weight: 500;
+  font-weight: 300;
   width: 95%;
   min-height: 200px;
   display: flex;
@@ -141,13 +141,13 @@ class Testimonials extends React.Component {
       {
         name: "Maddie + Ethan",
         text:
-          "Even though I hadn’t gotten the chance to meet with Cheri before my wedding, she knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life. I knew I could trust Cheri to get everything done and without any questions. My wedding day was absolutely perfect, thanks to Cheri.",
+          "Even though I hadn’t gotten the chance to meet with Cheri before my wedding, she knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life.",
         secondaryText: "Silverwood Park - Minneapolis"
       },
       {
         name: "Ellie + Chris",
         text:
-          "Cheri I cannot thank you enough for everything you did for our wedding. It put me at ease the day-of knowing that everything was in good hands and that you were there to take care of anything that came up! The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.",
+          "The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.",
         secondaryText: "The Graduate Hotel"
       },
       {
@@ -159,13 +159,13 @@ class Testimonials extends React.Component {
       {
         name: "Meghan + Cathy",
         text:
-          "We are so excited to learn that Cheri had gotten into the wedding / event planning space. She worked with us years ago at the start of what was to become Women Run the Cities Race in the Twin Cities and was a key player in the organization and it is operations which helped propel the race into record setting attendance. She is highly organized, strategic and cool under pressure – perfect qualities to lead LeVieve Events! Congrats Cheri",
+          "We are so excited to learn that Cheri had gotten into the wedding / event planning space. She worked with us years ago at the start of what was to become Women Run the Cities Race in the Twin Cities and was a key player in the organization and it is operations which helped propel the race into record setting attendance.",
         secondaryText: "Women Run the Cities - Minneapolis"
       },
       {
         name: "Renee",
         text:
-          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life. I greatly appreciated Cheri’s professionalism, energy and dependability during those planning months and especially on the day of the event.",
+          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life.",
         secondaryText: "The Metropolitan Events Center"
       }
     ],
@@ -249,7 +249,6 @@ class Testimonials extends React.Component {
           </FirstCombo>
           <TopComboWrapper>
             <TopDivText>Testimonials</TopDivText>
-            <TopDivBottomText>FROM PAST EVENTS</TopDivBottomText>
           </TopComboWrapper>
           <FirstCombo onClick={this.rightClick}>
             <Arrow>&#8594;</Arrow>

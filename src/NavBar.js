@@ -34,7 +34,6 @@ const LogoWrap = styled.div`
 
 const AdjustedImage = styled.img`
   width: 100%;
-  border-radius: 50%;
   max-width: 350px;
 `;
 

@@ -2,9 +2,16 @@ import React, { Component } from "react";
 import "./cForm.css";
 import styled from "styled-components";
 import image from "./images/beautiful-beauty-bouquet-2472858.jpg";
+import pic1 from "./images/1.jpg";
+import pic2 from "./images/2.jpg";
+import pic3 from "./images/3.jpg";
+
+import pic5 from "./images/5.jpg";
+import pic6 from "./images/6.jpg";
 import { media } from "./GenericStyledComponents";
 import { Form } from "semantic-ui-react";
 import LVStyleGuide from "./LVStyleGuide";
+import "./commentform.css";
 
 const PageWrap = styled.div`
   display: flex;
@@ -173,8 +180,17 @@ class CommentForm extends Component {
     email: "",
     firstName: "",
     lastName: "",
-    message: ""
+    message: "",
+    landingPic: ""
   };
+
+  componentDidMount() {
+    const a = [pic1, pic2, pic3, pic5, pic6, image];
+    this.setState({ landingPic: a[Math.floor(Math.random() * a.length)] });
+    setInterval(() => {
+      this.setState({ landingPic: a[Math.floor(Math.random() * a.length)] });
+    }, 10000);
+  }
 
   componentDidUpdate(nP, nS) {
     if (this.state.emailRes) {
@@ -237,7 +253,7 @@ class CommentForm extends Component {
   };
   render() {
     return (
-      <PageWrap url={image}>
+      <PageWrap url={this.state.landingPic}>
         {this.state.emailRes && this.showMessage()}
         <WhiteBox>
           <BigText>

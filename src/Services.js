@@ -43,6 +43,7 @@ const EventWrap = styled.div`
 
 const EHD = styled.div`
   width: 100%;
+  background-color: ${props => props.backgroundColor};
   &:hover {
   }
 `;
@@ -72,13 +73,16 @@ const TopText = styled.h2`
 `;
 const SecText = styled.h2`
   color: #553e4ceb;
-  font-family: Neoteric;
-  font-size: 30px;
-  font-weight: 300;
+  font-family: Neoteric Bold;
+  font-size: 24px;
+  padding: 0;
+  padding: 0 30px;
+  font-weight: 500;
   text-align: center;
+  max-width: 1000px;
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 `;
 
@@ -91,18 +95,18 @@ class Services extends React.Component {
           this.state.open === 1 ? () => this.setState({ open: 0 }) : null
         }
       >
-        <EHD
+        <EventHeader
           onClick={
             this.state.open === 0 || this.state.open === 2
               ? () => this.setState({ open: 1 })
               : () => this.setState({ open: 0 })
           }
+          backgroundColor={this.state.open === 1 ? "#d8d6d6" : null}
         >
-          <EventHeader>
-            {this.state.open === 1 ? "-" : "+"}&nbsp;Event Services&nbsp;
-            {this.state.open === 1 ? "-" : "+"}
-          </EventHeader>
-        </EHD>
+          {this.state.open === 1 ? "-" : "+"}&nbsp;Event Services&nbsp;
+          {this.state.open === 1 ? "-" : "+"}
+        </EventHeader>
+
         {this.state.open === 1 ? <EventsExpansion /> : null}
       </EventWrap>
     );
@@ -114,18 +118,18 @@ class Services extends React.Component {
           this.state.open === 2 ? () => this.setState({ open: 0 }) : null
         }
       >
-        <EHD
+        <EventHeader
           onClick={
             this.state.open === 0 || this.state.open === 1
               ? () => this.setState({ open: 2 })
               : () => this.setState({ open: 0 })
           }
+          backgroundColor={this.state.open === 2 ? "#d8d6d6" : null}
         >
-          <EventHeader>
-            {this.state.open === 2 ? "-" : "+"}&nbsp;Wedding Services&nbsp;
-            {this.state.open === 2 ? "-" : "+"}
-          </EventHeader>
-        </EHD>
+          {this.state.open === 2 ? "-" : "+"}&nbsp;Wedding Services&nbsp;
+          {this.state.open === 2 ? "-" : "+"}
+        </EventHeader>
+
         {this.state.open === 2 ? <WeddingExpansion /> : null}
       </EventWrap>
     );
@@ -136,7 +140,11 @@ class Services extends React.Component {
         <Header>Services</Header>
         <hr style={{ width: "50%" }} />
         <SecText>
-          Your Dreams + Details = Memorable + Worry-free experience
+          I love planning and celebrating life’s happiest moments. Having
+          LeVieve Events as your day-of coordinator gives you the day off to
+          enjoy each and every moment. Let me manage the logistics, the
+          questions and any unexpected surprises. Relax, have fun and leave the
+          details to me!
         </SecText>
         {this.displayWeddings()}
         {this.displayEvents()}

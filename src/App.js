@@ -27,7 +27,6 @@ class App extends React.Component {
     return (
       <PageWrap>
         <Hero navFunc={this.navFunc} />
-        <EventTypeIconBanner />
         <span id="aboutMe">
           <AboutMe />
         </span>
@@ -41,6 +40,7 @@ class App extends React.Component {
         <span id="contact">
           <CommentForm />
         </span>
+        <EventTypeIconBanner />
         <Footer />
       </PageWrap>
     );

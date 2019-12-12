@@ -12,7 +12,7 @@ const PageWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #758972;
+  margin: 40px 0;
 `;
 
 const SingleIcon = styled.div`
@@ -20,13 +20,12 @@ const SingleIcon = styled.div`
   height: 100px;
   max-width: 441px;
   min-width: 250px;
-  margin: 10px 20px;
+  margin: 5px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 8px -4px #553d4b;
+  box-shadow: 0px 0px 8px -3px #758972;
   background-color: white;
-  border-radius: 2px;
 `;
 
 const ImageWrap = styled.div`

@@ -1,0 +1,20 @@
+input {
+  padding: 5px;
+  font-size: 16px;
+  font-family: "Helvetica";
+  font-weight: 300;
+}
+
+#message {
+  padding: 5px;
+  font-size: 18px;
+  font-family: "Helvetica";
+  font-weight: 300;
+}
+
+#email {
+  padding: 5px;
+  font-size: 18px;
+  font-family: "Helvetica";
+  font-weight: 300;
+}
