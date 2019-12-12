@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import JSON from "../package.json";
+import blahblah from "../package.json";
 
 const PageWrap = styled.div`
   display: flex;
@@ -38,8 +38,7 @@ const FTitle = styled.h1`
 const SmallTitle = styled.span`
   font-family: Lato;
   font-weight: 100;
-  color: black;
-  font-size: 22px;
+  font-size: 14px;
 `;
 
 const Version = styled.h1`
@@ -97,6 +96,7 @@ class Footer extends React.Component {
           <span style={{ fontFamily: "Helvetica" }}>@</span>levieve_events
         </Instagram>
         <Title>Believe ~ LeVieve</Title>
+        <SmallTitle>v{blahblah.version}</SmallTitle>
       </PageWrap>
     );
   }
