@@ -30,17 +30,17 @@ class App extends React.Component {
         <span id="aboutMe">
           <AboutMe />
         </span>
-        <span id="testimonials">
-          <Testimonials />
-        </span>
-        {/* <SendAMessage navFunc={this.navFunc} /> */}
         <span id="services">
           <Services />
+        </span>
+        {/* <SendAMessage navFunc={this.navFunc} /> */}
+        <span id="testimonials">
+          <Testimonials />
         </span>
         <span id="contact">
           <CommentForm />
         </span>
-        <EventTypeIconBanner />
+        {/* <EventTypeIconBanner /> */}
         <Footer />
       </PageWrap>
     );

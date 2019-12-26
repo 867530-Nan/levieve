@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import blahblah from "../package.json";
-
+import Instagram from "./images/instagram-logo.png";
 const PageWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@ const Arrow = styled.div`
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.05, 1.05);
+    transform: scale(1.1, 1.1);
   }
 `;
 
@@ -66,19 +66,22 @@ const BL = styled.h3`
   color: white;
 `;
 
-const Instagram = styled.a`
+const InstagramAnchor = styled.a`
   color: black;
   text-decoration: none;
   font-size: 24px;
   font-weight: 300;
   font-family: Neoteric
+  max-width: 40px;
 
   &:hover {
     cursor: pointer;
-    font-weight: 700;
+    transform: scale(1.1,1.1);
   }
 `;
-
+const InstaPhoto = styled.img`
+  width: 100%;
+`;
 class Footer extends React.Component {
   render() {
     return (
@@ -88,15 +91,13 @@ class Footer extends React.Component {
         >
           &#8593;
         </Arrow>
-        <FTitle>Twin Cities, MN</FTitle>
-        <Instagram
+        <Title>Believe ~ LeVieve</Title>
+        <InstagramAnchor
           target="_blank"
           href="https://www.instagram.com/levieve_events/"
         >
-          <span style={{ fontFamily: "Helvetica" }}>@</span>levieve_events
-        </Instagram>
-        <Title>Believe ~ LeVieve</Title>
-        <SmallTitle>v{blahblah.version}</SmallTitle>
+          <InstaPhoto src={Instagram} />
+        </InstagramAnchor>
       </PageWrap>
     );
   }

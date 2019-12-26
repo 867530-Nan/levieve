@@ -13,6 +13,9 @@ import { Form } from "semantic-ui-react";
 import LVStyleGuide from "./LVStyleGuide";
 import "./commentform.css";
 
+const RandomDiv = styled.div`
+  background-color: black;
+`;
 const PageWrap = styled.div`
   display: flex;
   background: url(${props => props.url}) no-repeat bottom center;
@@ -180,16 +183,11 @@ class CommentForm extends Component {
     email: "",
     firstName: "",
     lastName: "",
-    message: "",
-    landingPic: ""
+    message: ""
   };
 
   componentDidMount() {
     const a = [pic1, pic2, pic3, pic5, pic6, image];
-    this.setState({ landingPic: a[Math.floor(Math.random() * a.length)] });
-    setInterval(() => {
-      this.setState({ landingPic: a[Math.floor(Math.random() * a.length)] });
-    }, 10000);
   }
 
   componentDidUpdate(nP, nS) {
@@ -253,62 +251,64 @@ class CommentForm extends Component {
   };
   render() {
     return (
-      <PageWrap url={this.state.landingPic}>
-        {this.state.emailRes && this.showMessage()}
-        <WhiteBox>
-          <BigText>
-            Let's talk, <br />
-            Send me a message below.
-            <br />
-          </BigText>
-          <Anchor href="mailto:levieveevents@gmail.com">
-            <LeSpan> * levieveevents.com </LeSpan>
-          </Anchor>
-          <ContactForm>
-            <FormDiv>
-              <InputWrap>
-                <FormInput
-                  fluid
-                  onChange={this.handleFormChange}
-                  className="commentFormPlaceholder"
-                  id="firstName"
-                  value={this.state.firstName}
-                  placeholder="First Name"
-                />
-              </InputWrap>
-              <InputWrap>
-                <FormInput
-                  fluid
-                  onChange={this.handleFormChange}
-                  className="commentFormPlaceholder"
-                  id="lastName"
-                  value={this.state.lastName}
-                  placeholder="Last Name"
-                />
-              </InputWrap>
-              <EmailWrap>
-                <FormEmail
-                  onChange={this.handleFormChange}
-                  className="commentFormPlaceholder"
-                  id="email"
-                  value={this.state.email}
-                  placeholder="lets.connect@email.com"
-                />
-              </EmailWrap>
-              <TextAreaWrap>
-                <FormTextArea
-                  onChange={this.handleFormChange}
-                  className="commentFormPlaceholder"
-                  id="message"
-                  value={this.state.message}
-                  placeholder="Write me a message.."
-                />
-              </TextAreaWrap>
-            </FormDiv>
-          </ContactForm>
-          <SubmitButton onClick={this.handleFormSubmit}>Submit</SubmitButton>
-        </WhiteBox>
-      </PageWrap>
+      <RandomDiv>
+        <PageWrap url={image}>
+          {this.state.emailRes && this.showMessage()}
+          <WhiteBox>
+            <BigText>
+              Let's talk, <br />
+              Send me a message below.
+              <br />
+            </BigText>
+            <Anchor href="mailto:levieveevents@gmail.com">
+              <LeSpan> * levieveevents.com </LeSpan>
+            </Anchor>
+            <ContactForm>
+              <FormDiv>
+                <InputWrap>
+                  <FormInput
+                    fluid
+                    onChange={this.handleFormChange}
+                    className="commentFormPlaceholder"
+                    id="firstName"
+                    value={this.state.firstName}
+                    placeholder="First Name"
+                  />
+                </InputWrap>
+                <InputWrap>
+                  <FormInput
+                    fluid
+                    onChange={this.handleFormChange}
+                    className="commentFormPlaceholder"
+                    id="lastName"
+                    value={this.state.lastName}
+                    placeholder="Last Name"
+                  />
+                </InputWrap>
+                <EmailWrap>
+                  <FormEmail
+                    onChange={this.handleFormChange}
+                    className="commentFormPlaceholder"
+                    id="email"
+                    value={this.state.email}
+                    placeholder="lets.connect@email.com"
+                  />
+                </EmailWrap>
+                <TextAreaWrap>
+                  <FormTextArea
+                    onChange={this.handleFormChange}
+                    className="commentFormPlaceholder"
+                    id="message"
+                    value={this.state.message}
+                    placeholder="Write me a message.."
+                  />
+                </TextAreaWrap>
+              </FormDiv>
+            </ContactForm>
+            <SubmitButton onClick={this.handleFormSubmit}>Submit</SubmitButton>
+          </WhiteBox>
+        </PageWrap>
+      </RandomDiv>
     );
   }
 }

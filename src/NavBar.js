@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "./NavBar.css";
 import Logo from "./images/origLogo.png";
+import Instagram from "./images/instagram-logo.png";
 
 const MobileNav = styled.div`
   display: flex;
@@ -42,6 +43,7 @@ const LinkDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 50%;
 `;
 
@@ -142,6 +144,16 @@ const SmallText = styled.h1`
   }
 `;
 
+const InstaWrap = styled.a`
+  max-width: 40px;
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+`;
+const InstaPhoto = styled.img`
+  width: 100%;
+`;
+
 class NavBar extends React.Component {
   state = {
     mobileOpen: true,
@@ -149,24 +161,36 @@ class NavBar extends React.Component {
       { anchor: "aboutMe", name: "About" },
       { anchor: "testimonials", name: "Testimonials" },
       { anchor: "services", name: "Services" },
-      { anchor: "contact", name: "Contact" }
+      { anchor: "contact", name: "Contact" },
+      { anchor: "insta", image: Instagram }
     ]
   };
 
   renderNavLinks() {
     return this.state.navLinks.map((s, i) => {
-      return (
-        <MobileWrapperDiv
-          onClick={
-            s.anchor === "Journal"
-              ? () => alert("* LeVeive Events Journal Coming Soon *")
-              : () => this.props.navFunc(s.anchor)
-          }
-          key={i * Math.random()}
-        >
-          <SmallText>{s.name}</SmallText>
-        </MobileWrapperDiv>
-      );
+      if (s.anchor === "insta") {
+        return (
+          <InstaWrap
+            target="_blank"
+            href="https://www.instagram.com/levieve_events/"
+          >
+            <InstaPhoto src={s.image} />
+          </InstaWrap>
+        );
+      } else {
+        return (
+          <MobileWrapperDiv
+            onClick={
+              s.anchor === "Journal"
+                ? () => alert("* LeVeive Events Journal Coming Soon *")
+                : () => this.props.navFunc(s.anchor)
+            }
+            key={i * Math.random()}
+          >
+            <SmallText>{s.name}</SmallText>
+          </MobileWrapperDiv>
+        );
+      }
     });
   }
 

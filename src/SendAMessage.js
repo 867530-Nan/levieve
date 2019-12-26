@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const PageWrap = styled.div`
-  height: 150px;
+  height: 300px;
   width: 100%;
-  background-color: #fdf3f3;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 const PageText = styled.h1`
@@ -50,15 +51,15 @@ class SendAMesasge extends React.Component {
           fS={this.state.hover ? "Neoteric-Bold" : "Neoteric"}
           fP={this.state.hover ? "pointer" : "initial"}
         >
-          &#8609; Say Hello! &#8609;
+          &#8609; Contact Form Below &#8609;
         </PageText>
         <Divider />
-        <SecondaryText
+        {/* <SecondaryText
           fS={this.state.hover ? "Neoteric-Bold" : "Neoteric"}
           fP={this.state.hover ? "pointer" : "initial"}
         >
           (click to message)
-        </SecondaryText>
+        </SecondaryText> */}
       </PageWrap>
     );
   }

@@ -32,19 +32,29 @@ const PageWrap = styled.div`
   align-items: center;
 `;
 
-const EventWrap = styled.div`
-  flex-direction: column;
-  width: 100%;
-  &:hover {
-    background-color: #d8d6d6;
-    cursor: pointer;
-  }
+const VerticalDivide = styled.div`
+  width: 1px;
+  background-color: #553e4c;
+  height: 250px;
 `;
 
-const EHD = styled.div`
+const ExpanderWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+`;
+
+const EventWrap = styled.div`
+  flex-direction: column;
+  width: ${props => props.width};
+  height: ${props => props.height};
+  display: flex;
+  justify-content: center;
   background-color: ${props => props.backgroundColor};
   &:hover {
+    background-color: ${props => props.hB}
+    cursor: pointer;
   }
 `;
 
@@ -54,8 +64,9 @@ const EventHeader = styled.h1`
   font-weight: 300;
   text-align: center;
 
-  &:hover {
-    cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 26px;
+    padding: 0 10px;
   }
 `;
 
@@ -86,26 +97,51 @@ const SecText = styled.h2`
   }
 `;
 
+const BackWrap = styled.div`
+  height: 100px;
+  width: 100%;
+  background-color: #7589728c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: #7672898c;
+    cursor: pointer;
+  }
+`;
+const BackText = styled.h1`
+  color: black;
+  font-family: Neoteric;
+  font-weight: 700;
+  text-align: center;
+`;
+
 class Services extends React.Component {
   state = { open: 0 };
+  showBack() {
+    return (
+      <BackWrap onClick={() => this.setState({ open: 0 })}>
+        <BackText>- Back -</BackText>
+      </BackWrap>
+    );
+  }
+
   displayEvents = () => {
     return (
       <EventWrap
+        hB={this.state.open === 1 ? null : "#d8d6d6"}
+        height={this.state.open === 1 ? "initial" : "250px"}
         onClick={
-          this.state.open === 1 ? () => this.setState({ open: 0 }) : null
+          this.state.open === 0 || this.state.open === 2
+            ? () => this.setState({ open: 1 })
+            : () => this.setState({ open: 0 })
         }
+        width={
+          this.state.open === 1 ? "100%" : this.state.open === 2 ? "0" : "50%"
+        }
+        backgroundColor={this.state.open === 1 ? null : "white"}
       >
-        <EventHeader
-          onClick={
-            this.state.open === 0 || this.state.open === 2
-              ? () => this.setState({ open: 1 })
-              : () => this.setState({ open: 0 })
-          }
-          backgroundColor={this.state.open === 1 ? "#d8d6d6" : null}
-        >
-          {this.state.open === 1 ? "-" : "+"}&nbsp;Event Services&nbsp;
-          {this.state.open === 1 ? "-" : "+"}
-        </EventHeader>
+        <EventHeader>Event Services</EventHeader>
 
         {this.state.open === 1 ? <EventsExpansion /> : null}
       </EventWrap>
@@ -114,26 +150,25 @@ class Services extends React.Component {
   displayWeddings = () => {
     return (
       <EventWrap
+        hB={this.state.open === 2 ? null : "#d8d6d6"}
+        height={this.state.open === 2 ? "initial" : "250px"}
         onClick={
-          this.state.open === 2 ? () => this.setState({ open: 0 }) : null
+          this.state.open === 0 || this.state.open === 1
+            ? () => this.setState({ open: 2 })
+            : () => this.setState({ open: 0 })
         }
+        width={
+          this.state.open === 2 ? "100%" : this.state.open === 1 ? "0" : "50%"
+        }
+        backgroundColor={this.state.open === 2 ? null : "white"}
       >
-        <EventHeader
-          onClick={
-            this.state.open === 0 || this.state.open === 1
-              ? () => this.setState({ open: 2 })
-              : () => this.setState({ open: 0 })
-          }
-          backgroundColor={this.state.open === 2 ? "#d8d6d6" : null}
-        >
-          {this.state.open === 2 ? "-" : "+"}&nbsp;Wedding Services&nbsp;
-          {this.state.open === 2 ? "-" : "+"}
-        </EventHeader>
+        <EventHeader>Wedding Services</EventHeader>
 
         {this.state.open === 2 ? <WeddingExpansion /> : null}
       </EventWrap>
     );
   };
+
   render() {
     return (
       <PageWrap>
@@ -146,8 +181,13 @@ class Services extends React.Component {
           questions and any unexpected surprises. Relax, have fun and leave the
           details to me!
         </SecText>
-        {this.displayWeddings()}
-        {this.displayEvents()}
+        {this.state.open != 0 ? this.showBack() : null}
+
+        <ExpanderWrap>
+          {this.displayWeddings()}
+          {this.state.open === 0 ? <VerticalDivide /> : null}
+          {this.displayEvents()}
+        </ExpanderWrap>
       </PageWrap>
     );
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Mom from "./Mom.jpg";
-import Mom2 from "./Mom2.jpg";
+import Mom2 from "./images/CheriLeVieveEdited-24.jpg";
 const PageWrap = styled.div`
   height: 600px;
   width: 100%;
@@ -10,6 +10,7 @@ const PageWrap = styled.div`
   align-items: center;
   background-color: white;
   border-top: 2px solid ${props => props.borderColor};
+  border-bottom: 2px solid ${props => props.borderColor};
   @media (max-width: 880px) {
     height: initial;
     flex-direction: column;
