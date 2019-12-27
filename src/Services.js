@@ -70,6 +70,15 @@ const EventHeader = styled.h1`
   }
 `;
 
+const ClickHeader = styled.h5`
+  color: #553e4ceb;
+  font-family: helvetica;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+`;
+
 const TopWrap = styled.div``;
 
 const Header = styled.h1`
@@ -117,7 +126,7 @@ const BackText = styled.h1`
 `;
 
 class Services extends React.Component {
-  state = { open: 0 };
+  state = { open: 0, hover: 0 };
   showBack() {
     return (
       <BackWrap onClick={() => this.setState({ open: 0 })}>
@@ -129,6 +138,8 @@ class Services extends React.Component {
   displayEvents = () => {
     return (
       <EventWrap
+        onMouseEnter={() => this.setState({ hover: 1 })}
+        onMouseLeave={() => this.setState({ hover: 0 })}
         hB={this.state.open === 1 ? null : "#d8d6d6"}
         height={this.state.open === 1 ? "initial" : "250px"}
         onClick={
@@ -142,6 +153,9 @@ class Services extends React.Component {
         backgroundColor={this.state.open === 1 ? null : "white"}
       >
         <EventHeader>Event Services</EventHeader>
+        {this.state.hover === 1 && this.state.open === 0 ? (
+          <ClickHeader>Show More</ClickHeader>
+        ) : null}
 
         {this.state.open === 1 ? <EventsExpansion /> : null}
       </EventWrap>
@@ -150,6 +164,8 @@ class Services extends React.Component {
   displayWeddings = () => {
     return (
       <EventWrap
+        onMouseEnter={() => this.setState({ hover: 2 })}
+        onMouseLeave={() => this.setState({ hover: 0 })}
         hB={this.state.open === 2 ? null : "#d8d6d6"}
         height={this.state.open === 2 ? "initial" : "250px"}
         onClick={
@@ -163,7 +179,9 @@ class Services extends React.Component {
         backgroundColor={this.state.open === 2 ? null : "white"}
       >
         <EventHeader>Wedding Services</EventHeader>
-
+        {this.state.hover === 2 && this.state.open === 0 ? (
+          <ClickHeader>Show More</ClickHeader>
+        ) : null}
         {this.state.open === 2 ? <WeddingExpansion /> : null}
       </EventWrap>
     );

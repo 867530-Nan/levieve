@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ExpandWrap = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 50px 0;
   background: radial-gradient(
       circle,
       transparent 20%,
@@ -41,9 +42,18 @@ const Asterisk = styled.h3`
   font-size: 16px;
   font-style: italic;
   margin: 0;
-  text-indent: 20px;
+  padding-left: 20px;
   margin-left: 20px;
   color: #553e4ceb;
+`;
+
+const MiddleOne = styled.h3`
+  font-size: 22px;
+  font-family: helvetica;
+  font-weight: ${props => (props.weight ? "500" : "300")};
+  margin: 10px 0;
+  color: #553e4ceb;
+  padding: 0 30px;
 `;
 
 const Footer = styled.h4`
@@ -62,101 +72,79 @@ const UL = styled.ul``;
 
 const LI = styled.li`
   color: #553e4ceb;
+  padding: 3px 5px;
 `;
 
 const WeddingExpansion = () => {
   return (
     <ExpandWrap>
+      <MiddleOne weight={false}>
+        Now that you've found the love-of-your-life, let's plan for the best day
+        of your life. LeVieve Events is a "day-of-coordinator" service.
+      </MiddleOne>
+      <MiddleOne weight={true}>What I provide for you:</MiddleOne>
       <ULMain>
         <LI>
-          Two meetings prior to the wedding day (this is where it will all come
-          together)
+          Two meetings prior to the wedding day..
           <UL>
             <LI>
-              8 weeks before – walk the venue, talk about what’s been planned,
-              which vendors have been hired and what’s keeping you awake at
-              night. (2 hours)
+              Walk venue(s), talk about what's been planned, vendors you've
+              hired and what's keeping you awake at night
             </LI>
             <LI>
-              3 weeks before – confirm all vendors are locked in, create your
-              day-of timeline, finalize location layouts, finish the lists and
-              paint the picture of your perfect day. (2 hours)
+              Create your day-of timeline, finalize location layouts, finish the
+              lists and paint the picture of your perfect day.
             </LI>
           </UL>
         </LI>
-        <LI>
-          Rehearsal: up to 60 minutes if needed (some officiants also provide
-          this in their pricing)
-        </LI>
-        <LI>
-          Coordination and set-up of wedding ceremony and reception (Up to 10
-          hours).
-          <UL>
-            <LI>
-              Vendor Management
-              <UL>
-                <LI>
-                  coordinate vendors (deliveries, set-up and magically take care
-                  of unexpected surprises)
-                </LI>
-                <LI>
-                  set up linens, center pieces, table numbers, place cards,
-                  guest book, favors, toasting flutes, cake server &amp; knife,
-                  personal items, card box, gift table, etc.
-                </LI>
-                <LI>receive set-up and distribute flowers, pin boutonnieres</LI>
-                <LI>
-                  partner with photographer, videographer, musicians, caterer,
-                  DJ, etc. to ensure that timeline we worked on earlier gets
-                  executed as planned.
-                </LI>
-              </UL>
-            </LI>
-          </UL>
-        </LI>
+        <LI>Setup and take down of the reception (Up to 10 hours)</LI>
+
+        <UL>
+          <LI>
+            Setup linens, center pieces, table numbers, place cards, guest book,
+            favors, toasting flutes, cake server &amp; knife, personal items,
+            card box, gift table, etc
+          </LI>
+          <LI>receive set-up and distribute flowers, pin boutonnieres</LI>
+          <LI>
+            Partner with all vendors to ensure that timeline we worked on
+            earlier gets executed as planned.
+          </LI>
+        </UL>
         <LI>
           Ceremony
           <UL>
+            <LI>Coordinate officiant, musicians, readers, etc.</LI>
+            <LI>Setup personal items (candles, pictures, programs, etc.)</LI>
             <LI>
-              coordinate officiant, musicians, readers – everyone making this
-              ceremony special for you
-            </LI>
-            <LI>set up personal items (candles, pictures, programs, etc.)</LI>
-            <LI>
-              organize the ushers and attendants (processional), que the music,
-              get the ceremony started on time.
+              Organize ushers and attendants (processional), que the music, get
+              the ceremony started on time.
             </LI>
             <LI>
               cheerfully prompt the bride and her escort to take that walk that
-              everyone’s been waiting for... fluff that beautiful train…all eyes
-              are on you…the love of your life awaits.
+              everyone’s been waiting for. Fluff that beautiful train...all eyes
+              are on you...the love of your life awaits.
             </LI>
           </UL>
           <LI>
             Reception
             <UL>
               <LI>
-                transition guest’s b/t locations as needed; ceremony, cocktail,
-                dining etc.
+                Transition guests b/t locations as needed; ceremony, cocktail,
+                dining, etc.
               </LI>
               <LI>
-                que music, dismiss tables (buffet), coordinate toasts, speeches,
-                first dance(s)
+                Dismiss tables (buffet), coordinate toasts, speeches, cue
+                music/first dance(s)
               </LI>
-              <LI>relocate gifts &amp; cards to a secure location</LI>
-              <LI>
-                cater to you (beverages and small errands) so you do nothing but
-                enjoy the celebration
-              </LI>
+              <LI>Relocate gifts &amp; cards to a secure location</LI>
+              <LI>Cater to you so you do nothing but enjoy the celebration</LI>
             </UL>
           </LI>
         </LI>
         <LI>
-          Handle delivery of final payments from couple to vendors as needed
-        </LI>
-        <LI>
-          End of event repacking of personal items and hand off to family and
-          friends.
+          End of reception tear-down and repack personal items, hand off to
+          family.
         </LI>
       </ULMain>
       <Pricing>Package Price: $1100*</Pricing>
@@ -167,10 +155,6 @@ const WeddingExpansion = () => {
       <Asterisk>
         * Discounts for: active military, veterans and first responders.
       </Asterisk>
-      <Footer>
-        ~ Let’s find some time to get together and talk about your special event
-        ~
-      </Footer>
     </ExpandWrap>
   );
 };

@@ -72,7 +72,7 @@ const InstagramAnchor = styled.a`
   font-size: 24px;
   font-weight: 300;
   font-family: Neoteric
-  max-width: 40px;
+  max-width: 30px;
 
   &:hover {
     cursor: pointer;

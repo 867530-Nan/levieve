@@ -139,13 +139,10 @@ const Text = styled.h1`
 const SmallText = styled.h1`
   font-weight: 100;
   font-family: Neoteric;
-  &:hover {
-    border-bottom: 1px solid black;
-  }
 `;
 
 const InstaWrap = styled.a`
-  max-width: 40px;
+  max-width: 30px;
   &:hover {
     transform: scale(1.1, 1.1);
   }

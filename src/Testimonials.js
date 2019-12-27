@@ -113,7 +113,7 @@ const SingleCard = styled.div`
   width: 100%;
   border-radius: 3px;
   max-width: 400px;
-  min-height: 610px;
+  min-height: 700px;
   margin: 50px;
   padding: 0 10px;
 
@@ -160,31 +160,31 @@ class Testimonials extends React.Component {
       {
         name: "The Graduate Hotel",
         text:
-          "The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.\nEllie & Chris",
+          "The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.\n\n- Ellie & Chris -",
         image: ChrisEllie
       },
       {
         name: "Silverwood Park\nThree Rivers Parks",
         text:
-          "Cheri knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life.\nMaddie & Ethan",
+          "Cheri knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life.\n\n- Maddie & Ethan -",
         image: silverwood
       },
       {
         name: "The Metropolitan Event Center",
         text:
-          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life.\nRenee",
+          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life.\n\n- Renee -",
         image: Cele
       },
       {
         name: "Mother-of-the-Bride Gratitude",
         text:
-          "Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride I was able to relax and enjoy every moment of the memorable day.\nJeanne",
+          "Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride I was able to relax and enjoy every moment of the memorable day.\n\n- Jeanne -",
         image: Maddie
       },
       {
         name: "Women Run the Cities",
         text:
-          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life.",
+          "Cheri worked with us years ago at the start of what was to become Women Run the Cities Race. She was a key player helping propel the race from 900 to 4000 participants! We are thrilled to see her in the event coordinator business.\n\n- Meghan & Cathy -",
         image: WRTC
       }
     ],
