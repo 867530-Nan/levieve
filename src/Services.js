@@ -89,7 +89,7 @@ const SecText = styled.h2`
 const BackWrap = styled.div`
   height: 100px;
   width: 100%;
-  background-color: #7589728c;
+  background-color: #9fc898;
   display: flex;
   justify-content: center;
   align-items: center;
