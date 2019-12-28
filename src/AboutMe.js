@@ -9,8 +9,8 @@ const PageWrap = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  border-top: 2px solid ${props => props.borderColor};
-  border-bottom: 2px solid ${props => props.borderColor};
+  border-top: 1px solid ${props => props.borderColor};
+  border-bottom: 1px solid ${props => props.borderBottom};
   @media (max-width: 880px) {
     height: initial;
     flex-direction: column;
@@ -153,7 +153,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <PageWrap borderColor="#773946">
+      <PageWrap borderColor="black" borderBottom="black">
         <First>
           <FirstTextDiv>
             <TextOne>Logistics Lover.</TextOne>
