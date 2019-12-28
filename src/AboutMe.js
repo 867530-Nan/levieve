@@ -64,7 +64,6 @@ const MomImage = styled.img`
   width: 100%;
   min-width: 250px;
   max-width: 330px;
-  opacity: ${props => props.opacity};
   border-radius: ${props => props.borderRadius};
 
   @media (max-width: 880px) {

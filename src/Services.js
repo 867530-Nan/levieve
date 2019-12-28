@@ -2,33 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import WeddingExpansion from "./WeddingExpansion";
 import EventsExpansion from "./EventsExpansion";
-
+import flower1 from "./images/flower1.png";
+import flower2 from "./images/flower2.png";
 const PageWrap = styled.div`
   height: initial;
-  background: radial-gradient(
-      circle,
-      transparent 20%,
-      white 20%,
-      white 80%,
-      transparent 80%,
-      transparent
-    ),
-    radial-gradient(
-        circle,
-        transparent 20%,
-        white 20%,
-        white 80%,
-        transparent 80%,
-        transparent
-      )
-      50px 50px,
-    linear-gradient(#553e4c0f 4px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #553e4c0f 4px, transparent 8px) -4px 0;
-  background-color: white;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
@@ -50,7 +30,7 @@ const EventWrap = styled.div`
   width: ${props => props.width};
   height: ${props => props.height};
   display: flex;
-  justify-content: center;
+  justify-content: ${props => props.justifyContent};
   background-color: ${props => props.backgroundColor};
   &:hover {
     background-color: ${props => props.hB}
@@ -118,11 +98,35 @@ const BackWrap = styled.div`
     cursor: pointer;
   }
 `;
+
 const BackText = styled.h1`
   color: black;
   font-family: Neoteric;
   font-weight: 700;
   text-align: center;
+`;
+
+const TopLeftImageDiv = styled.div``;
+const TopImage = styled.img`
+  position: absolute;
+  left: 0;
+  max-width: 200px;
+`;
+
+const BottomImage = styled.img`
+  position: absolute;
+  right: 0;
+  max-width: 200px;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
+`;
+
+const RightImage = styled.img`
+  position: absolute;
+  left: 0;
+  max-width: 200px;
 `;
 
 class Services extends React.Component {
@@ -138,6 +142,7 @@ class Services extends React.Component {
   displayEvents = () => {
     return (
       <EventWrap
+        justifyContent={this.state.open === 1 ? "flex-end" : "center"}
         onMouseEnter={() => this.setState({ hover: 1 })}
         onMouseLeave={() => this.setState({ hover: 0 })}
         hB={this.state.open === 1 ? null : "#d8d6d6"}
@@ -158,12 +163,14 @@ class Services extends React.Component {
         ) : null}
 
         {this.state.open === 1 ? <EventsExpansion /> : null}
+        {this.state.open === 1 ? <BottomImage src={flower2} /> : null}
       </EventWrap>
     );
   };
   displayWeddings = () => {
     return (
       <EventWrap
+        justifyContent={this.state.open === 2 ? "flex-end" : "center"}
         onMouseEnter={() => this.setState({ hover: 2 })}
         onMouseLeave={() => this.setState({ hover: 0 })}
         hB={this.state.open === 2 ? null : "#d8d6d6"}
@@ -178,11 +185,14 @@ class Services extends React.Component {
         }
         backgroundColor={this.state.open === 2 ? null : "white"}
       >
-        <EventHeader>Wedding Services</EventHeader>
+        {this.state.open === 0 ? (
+          <EventHeader>Wedding Services</EventHeader>
+        ) : null}
         {this.state.hover === 2 && this.state.open === 0 ? (
           <ClickHeader>Show More</ClickHeader>
         ) : null}
         {this.state.open === 2 ? <WeddingExpansion /> : null}
+        {this.state.open === 2 ? <BottomImage src={flower2} /> : null}
       </EventWrap>
     );
   };
@@ -190,6 +200,9 @@ class Services extends React.Component {
   render() {
     return (
       <PageWrap>
+        {/* <TopLeftImageDiv> */}
+        <TopImage src={flower1} />
+        {/* </TopLeftImageDiv> */}
         <Header>Services</Header>
         <hr style={{ width: "50%" }} />
         <SecText>

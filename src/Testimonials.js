@@ -4,9 +4,9 @@ import placeholder from "./images/5.jpg";
 import "./testimonials.css";
 import ChrisEllie from "./images/ChrisEllie.jpg";
 import Maddie from "./images/MaddieEthan.jpg";
-import Cele from "./images/Celebration.png";
+import Cele from "./images/clear-wine-glasses-with-gold-liquid-on-white-cloth-covered-2504941.jpg";
 import WRTC from "./images/WRTC.jpg";
-import silverwood from "./images/silverwood.jpeg";
+import silverwood from "./images/silverwood.jpg";
 const PurpDiv = styled.div`
   height: initial;
   display: flex;

@@ -5,27 +5,6 @@ const ExpandWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin: 50px 0;
-  background: radial-gradient(
-      circle,
-      transparent 20%,
-      white 20%,
-      white 80%,
-      transparent 80%,
-      transparent
-    ),
-    radial-gradient(
-        circle,
-        transparent 20%,
-        white 20%,
-        white 80%,
-        transparent 80%,
-        transparent
-      )
-      50px 50px,
-    linear-gradient(#553e4c0f 4px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #553e4c0f 4px, transparent 8px) -4px 0;
-  background-color: white;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
 `;
 
 const Pricing = styled.h2`
@@ -105,7 +84,7 @@ const WeddingExpansion = () => {
             favors, toasting flutes, cake server &amp; knife, personal items,
             card box, gift table, etc
           </LI>
-          <LI>receive set-up and distribute flowers, pin boutonnieres</LI>
+          <LI>Receive set-up and distribute flowers, pin boutonnieres</LI>
           <LI>
             Partner with all vendors to ensure that timeline we worked on
             earlier gets executed as planned.
@@ -117,13 +96,13 @@ const WeddingExpansion = () => {
             <LI>Coordinate officiant, musicians, readers, etc.</LI>
             <LI>Setup personal items (candles, pictures, programs, etc.)</LI>
             <LI>
-              Organize ushers and attendants (processional), que the music, get
+              Organize ushers and attendants (processional), cue the music, get
               the ceremony started on time.
             </LI>
             <LI>
-              cheerfully prompt the bride and her escort to take that walk that
-              everyone’s been waiting for. Fluff that beautiful train...all eyes
-              are on you...the love of your life awaits.
+              Cheerfully prompt the bride and escort to take the walk that
+              everyone’s waiting for. Fluff the beautiful train...all eyes on
+              you...the love of your life awaits.
             </LI>
           </UL>
           <LI>

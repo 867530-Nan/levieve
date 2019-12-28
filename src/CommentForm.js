@@ -148,6 +148,14 @@ const LeSpan = styled.p`
   margin: 0 0 0 15px;
 `;
 
+const HeSpan = styled.p`
+  font-size: 24px;
+  text-align: left;
+  font-family: Helvetica;
+  font-weight: 100;
+  margin: 0 0 0 15px;
+`;
+
 const Anchor = styled.a`
   text-decoration: none;
   color: black;
@@ -262,6 +270,9 @@ class CommentForm extends Component {
             </BigText>
             <Anchor href="mailto:levieveevents@gmail.com">
               <LeSpan> * levieveevents.com </LeSpan>
+            </Anchor>
+            <Anchor href="mailto:levieveevents@gmail.com">
+              <HeSpan> 952.221.4939 </HeSpan>
             </Anchor>
             <ContactForm>
               <FormDiv>

@@ -4,27 +4,6 @@ import styled from "styled-components";
 const ExpandWrap = styled.div`
   display: flex;
   flex-direction: column;
-  background: radial-gradient(
-      circle,
-      transparent 20%,
-      white 20%,
-      white 80%,
-      transparent 80%,
-      transparent
-    ),
-    radial-gradient(
-        circle,
-        transparent 20%,
-        white 20%,
-        white 80%,
-        transparent 80%,
-        transparent
-      )
-      50px 50px,
-    linear-gradient(#553e4c0f 4px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #553e4c0f 4px, transparent 8px) -4px 0;
-  background-color: white;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
 `;
 
 const Pricing = styled.h2`
