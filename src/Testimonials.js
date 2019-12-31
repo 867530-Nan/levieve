@@ -16,7 +16,7 @@ const PurpDiv = styled.div`
 
 const TopDiv = styled.div`
   display: flex;
-  height: 150px;
+  height: 125px;
   background-color: #553e4ceb;
   justify-content: center;
   align-items: center;

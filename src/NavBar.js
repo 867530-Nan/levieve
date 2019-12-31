@@ -156,8 +156,8 @@ class NavBar extends React.Component {
     mobileOpen: true,
     navLinks: [
       { anchor: "aboutMe", name: "About" },
-      { anchor: "testimonials", name: "Testimonials" },
       { anchor: "services", name: "Services" },
+      { anchor: "testimonials", name: "Testimonials" },
       { anchor: "contact", name: "Contact" },
       { anchor: "insta", image: Instagram }
     ]

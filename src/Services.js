@@ -38,8 +38,15 @@ const EventWrap = styled.div`
   }
 `;
 
+const HeaderWrap = styled.div`
+  height: 125px;
+  display: flex;
+  align-items: center;
+`;
+
 const EventHeader = styled.h1`
   color: #553e4ceb;
+  margin: 0;
   font-family: helvetica;
   font-weight: 300;
   text-align: center;
@@ -203,7 +210,9 @@ class Services extends React.Component {
         {/* <TopLeftImageDiv> */}
         <TopImage src={flower1} />
         {/* </TopLeftImageDiv> */}
-        <Header>Services</Header>
+        <HeaderWrap>
+          <Header>Services</Header>
+        </HeaderWrap>
         <hr style={{ width: "50%" }} />
         <SecText>
           I love planning and celebrating life’s happiest moments. Having

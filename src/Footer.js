@@ -7,8 +7,8 @@ const PageWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  background-color: #758972;
+  height: 150px;
+  background-color: #9fc898;
 `;
 
 const Line = styled.div`
@@ -86,18 +86,18 @@ class Footer extends React.Component {
   render() {
     return (
       <PageWrap>
-        <Arrow
+        {/* <Arrow
           onClick={() => window.scroll({ top: 0, left: 0, behavior: "smooth" })}
         >
           &#8593;
-        </Arrow>
-        <Title>Believe ~ LeVieve</Title>
+        </Arrow> */}
         <InstagramAnchor
           target="_blank"
           href="https://www.instagram.com/levieve_events/"
         >
           <InstaPhoto src={Instagram} />
         </InstagramAnchor>
+        <Title>Believe ~ LeVieve</Title>
       </PageWrap>
     );
   }
