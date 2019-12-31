@@ -137,6 +137,7 @@ const BigText = styled.h1`
 
   @media (max-width: 768px) {
     font-weight: 600;
+    font-size: 26px;
   }
 `;
 
@@ -264,7 +265,7 @@ class CommentForm extends Component {
           {this.state.emailRes && this.showMessage()}
           <WhiteBox>
             <BigText>
-              Let's talk, <br />
+              Let's talk about your upcoming event. <br />
               Send me a message below.
               <br />
             </BigText>
