@@ -46,7 +46,8 @@ const HeaderWrap = styled.div`
 
 const EventHeader = styled.h1`
   color: #553e4ceb;
-  margin: 0;
+  margin: ${props => props.margin};
+  text-align: ${props => props.leftAlign}
   font-family: helvetica;
   font-weight: 300;
   text-align: center;
@@ -164,10 +165,10 @@ class Services extends React.Component {
         }
         backgroundColor={this.state.open === 1 ? null : "white"}
       >
-        <EventHeader>Event Services</EventHeader>
-        {this.state.hover === 1 && this.state.open === 0 ? (
-          <ClickHeader>Show More</ClickHeader>
-        ) : null}
+        <EventHeader margin={this.state.show === 1 ? "30px 0" : null}>
+          Event Services
+        </EventHeader>
+        {this.state.hover === 2 ? <ClickHeader>Show More</ClickHeader> : null}
 
         {this.state.open === 1 ? <EventsExpansion /> : null}
         {this.state.open === 1 ? <BottomImage src={flower2} /> : null}
@@ -192,8 +193,10 @@ class Services extends React.Component {
         }
         backgroundColor={this.state.open === 2 ? null : "white"}
       >
-        {this.state.open === 0 ? (
-          <EventHeader>Wedding Services</EventHeader>
+        {this.state.open !== 1 ? (
+          <EventHeader margin={this.state.show === 2 ? "30px 0" : null}>
+            Wedding Services
+          </EventHeader>
         ) : null}
         {this.state.hover === 2 && this.state.open === 0 ? (
           <ClickHeader>Show More</ClickHeader>
