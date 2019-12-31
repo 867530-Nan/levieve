@@ -87,6 +87,10 @@ const TextAreaWrap = styled.div`
   min-width: 250px;
   height: 60px;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    width: 45%;
+  }
 `;
 
 const FormTextArea = styled.textarea`
