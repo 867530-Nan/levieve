@@ -117,7 +117,7 @@ const SubmitButton = styled.div`
     cursor: pointer;
   }
   ${media.tablet`
-    width: 75%
+    width: 70%
   `}
 `;
 
