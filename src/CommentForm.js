@@ -143,7 +143,7 @@ const BigText = styled.h1`
 const LeSpan = styled.p`
   font-size: 24px;
   text-align: left;
-  font-family: Neoteric;
+  font-family: Helvetica;
   font-weight: 100;
   margin: 0 0 0 15px;
 `;
@@ -269,10 +269,10 @@ class CommentForm extends Component {
               <br />
             </BigText>
             <Anchor href="mailto:levieveevents@gmail.com">
-              <LeSpan> * levieveevents.com </LeSpan>
+              <LeSpan> * levieveevents@gmail.com </LeSpan>
             </Anchor>
             <Anchor href="mailto:levieveevents@gmail.com">
-              <HeSpan> 952.221.4939 </HeSpan>
+              <HeSpan> * 952.221.4939 </HeSpan>
             </Anchor>
             <ContactForm>
               <FormDiv>
@@ -302,7 +302,7 @@ class CommentForm extends Component {
                     className="commentFormPlaceholder"
                     id="email"
                     value={this.state.email}
-                    placeholder="lets.connect@email.com"
+                    placeholder="Email Address"
                   />
                 </EmailWrap>
                 <TextAreaWrap>
