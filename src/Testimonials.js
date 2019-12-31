@@ -149,6 +149,7 @@ const CardSecondText = styled.h4`
 
 const CardDateLocation = styled.img`
   max-width: 80%;
+  max-height: 230px;
 `;
 
 class Testimonials extends React.Component {
