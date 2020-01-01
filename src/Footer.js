@@ -97,6 +97,7 @@ class Footer extends React.Component {
         >
           <InstaPhoto src={Instagram} />
         </InstagramAnchor>
+        <Title>Twin Cities, MN</Title>
         <Title>Believe ~ LeVieve</Title>
       </PageWrap>
     );

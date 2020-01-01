@@ -73,7 +73,7 @@ const EventsExpansion = () => {
           <LI>
             Up to two meetings prior to the event (this is where it will all
             come together). Work on the layout, timeline, décor, vendors, food,
-            music, gifts, etc.
+            music, gifts, etc
           </LI>
           <LI>
             On site for up to 5 hours on the day of the event to oversee
@@ -82,26 +82,26 @@ const EventsExpansion = () => {
           <LI>
             Coordination of vendors on the day of and getting them set-up, in
             place and ready to go (on time!). Set-up décor, arrange layouts, set
-            out food, etc.
+            out food, etc
           </LI>
           <LI>
             Ensure everything is in order so that you and your guests have an
-            amazing, memorable time.
+            amazing, memorable time
           </LI>
           <LI>
             Handle delivery of final payments to vendors (at the event) if
-            needed.
+            needed
           </LI>
-          <LI>General take-down and clean up.</LI>
+          <LI>General take-down and clean up</LI>
         </UL>
       </ULMain>
       <Pricing>Hourly Rate: $55*</Pricing>
       <Asterisk>
         * Slightly higher for events outside the Metro area (mileage and/or
-        accommodations).
+        accommodations)
       </Asterisk>
       <Asterisk>
-        * Discounts for: active military, veterans and first responders.
+        * Discounts for: active military, veterans and first responders
       </Asterisk>
       <Footer>~ Let’s get together and talk about your special event! ~</Footer>
     </ExpandWrap>

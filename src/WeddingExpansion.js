@@ -72,7 +72,7 @@ const WeddingExpansion = () => {
             </LI>
             <LI>
               Create your day-of timeline, finalize location layouts, finish the
-              lists and paint the picture of your perfect day.
+              lists and paint the picture of your perfect day
             </LI>
           </UL>
         </LI>
@@ -87,22 +87,22 @@ const WeddingExpansion = () => {
           <LI>Receive set-up and distribute flowers, pin boutonnieres</LI>
           <LI>
             Partner with all vendors to ensure that timeline we worked on
-            earlier gets executed as planned.
+            earlier gets executed as planned
           </LI>
         </UL>
         <LI>
           Ceremony
           <UL>
-            <LI>Coordinate officiant, musicians, readers, etc.</LI>
-            <LI>Setup personal items (candles, pictures, programs, etc.)</LI>
+            <LI>Coordinate officiant, musicians, readers, etc</LI>
+            <LI>Setup personal items (candles, pictures, programs, etc)</LI>
             <LI>
               Organize ushers and attendants (processional), cue the music, get
-              the ceremony started on time.
+              the ceremony started on time
             </LI>
             <LI>
               Cheerfully prompt the bride and escort to take the walk that
               everyone’s waiting for. Fluff the beautiful train...all eyes on
-              you...the love of your life awaits.
+              you...the love of your life awaits
             </LI>
           </UL>
           <LI>
@@ -110,7 +110,7 @@ const WeddingExpansion = () => {
             <UL>
               <LI>
                 Transition guests b/t locations as needed; ceremony, cocktail,
-                dining, etc.
+                dining, etc
               </LI>
               <LI>
                 Dismiss tables (buffet), coordinate toasts, speeches, cue
@@ -123,16 +123,16 @@ const WeddingExpansion = () => {
         </LI>
         <LI>
           End of reception tear-down and repack personal items, hand off to
-          family.
+          family
         </LI>
       </ULMain>
-      <Pricing>Package Price: $1100*</Pricing>
+      <Pricing>Package Price: $1,100*</Pricing>
       <Asterisk>
         * Slightly higher for events outside the Metro area (mileage and/or
-        accommodations).
+        accommodations)
       </Asterisk>
       <Asterisk>
-        * Discounts for: active military, veterans and first responders.
+        * Discounts for: active military, veterans and first responders
       </Asterisk>
     </ExpandWrap>
   );

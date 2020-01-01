@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "./NavBar.css";
-import Logo from "./images/origLogo.png";
+import Logo from "./images/editLogo.png";
 import Instagram from "./images/instagram-logo.png";
 
 const MobileNav = styled.div`
@@ -15,6 +15,7 @@ const MobileNav = styled.div`
 
   @media (max-width: 768px) {
     width: 50%;
+    background-color: rgb(255, 255, 255);
   }
 `;
 

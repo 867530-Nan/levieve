@@ -179,7 +179,7 @@ class Testimonials extends React.Component {
       {
         name: "Mother-of-the-Bride Gratitude",
         text:
-          "Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride I was able to relax and enjoy every moment of the memorable day.\n\n- Jeanne -",
+          "Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride, I was able to relax and enjoy every moment of the memorable day.\n\n- Jeanne -",
         image: Maddie
       },
       {
