@@ -71,6 +71,9 @@ const InputWrap = styled.div`
   min-height: 50px;
   min-width: 250px;
   height: 60px;
+  @media (max-width: 390px) {
+    min-width: 200px;
+  }
 `;
 
 const EmailWrap = styled.div`
@@ -78,6 +81,9 @@ const EmailWrap = styled.div`
   min-width: 250px;
   min-height: 50px;
   margin: 15px;
+  @media (max-width: 390px) {
+    min-width: 200px;
+  }
 `;
 
 const TextAreaWrap = styled.div`
@@ -87,6 +93,9 @@ const TextAreaWrap = styled.div`
   min-width: 250px;
   height: 60px;
   z-index: 1000;
+  @media (max-width: 390px) {
+    min-width: 200px;
+  }
 
   @media (max-width: 768px) {
     width: 45%;
@@ -143,6 +152,10 @@ const BigText = styled.h1`
     font-weight: 600;
     font-size: 26px;
   }
+  @media (max-width: 450px) {
+    font-weight: 600;
+    font-size: 22px;
+  }
 `;
 
 const LeSpan = styled.p`
@@ -151,6 +164,9 @@ const LeSpan = styled.p`
   font-family: Helvetica;
   font-weight: 100;
   margin: 0 0 0 15px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const HeSpan = styled.p`
@@ -159,6 +175,9 @@ const HeSpan = styled.p`
   font-family: Helvetica;
   font-weight: 100;
   margin: 0 0 0 15px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Anchor = styled.a`

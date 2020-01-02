@@ -36,6 +36,7 @@ const LogoWrap = styled.div`
 
 const AdjustedImage = styled.img`
   width: 100%;
+  height: 100%;
   max-width: 350px;
 `;
 
@@ -140,16 +141,34 @@ const Text = styled.h1`
 const SmallText = styled.h1`
   font-weight: 100;
   font-family: Neoteric;
+  @media (max-width: 1000px) {
+    font-size: 28px;
+  }
+  @media (max-width: 500px) {
+    font-size: 26px;
+  }
+  @media (max-width: 400px) {
+    font-size: 22px;
+  }
 `;
 
 const InstaWrap = styled.a`
+  width: 50px;
+  display: flex;
+  justify-content: center;
+`;
+const InstaPhoto = styled.img`
+  width: 100%;
   max-width: 30px;
   &:hover {
     transform: scale(1.1, 1.1);
   }
-`;
-const InstaPhoto = styled.img`
-  width: 100%;
+  @media (max-width: 500px) {
+    max-width: 25px;
+  }
+  @media (max-width: 400px) {
+    max-width: 25px;
+  }
 `;
 
 class NavBar extends React.Component {
