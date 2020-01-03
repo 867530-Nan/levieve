@@ -160,14 +160,13 @@ const InstaWrap = styled.a`
 const InstaPhoto = styled.img`
   width: 100%;
   max-width: 30px;
+  max-height: 30px;
   &:hover {
     transform: scale(1.1, 1.1);
   }
   @media (max-width: 500px) {
     max-width: 25px;
-  }
-  @media (max-width: 400px) {
-    max-width: 25px;
+    max-height: 25px;
   }
 `;
 
