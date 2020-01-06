@@ -204,7 +204,7 @@ class Testimonials extends React.Component {
     if (window.innerWidth < 768) {
       this.setState(s => {
         return {
-          testCards: s.testCards.splice(0, 2)
+          testCards: s.testCards.splice(0, 4)
         };
       });
     }
