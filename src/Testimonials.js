@@ -7,6 +7,147 @@ import Maddie from "./images/MaddieEthan.jpg";
 import Cele from "./images/clear-wine-glasses-with-gold-liquid-on-white-cloth-covered-2504941.jpg";
 import WRTC from "./images/WRTC.jpg";
 import silverwood from "./images/silverwood.jpg";
+import AnnaScott from './images/confettiAnnaScott.jpg'
+
+class Testimonials extends React.Component {
+  state = {
+    fromNumber: 0,
+    toNumber: 0,
+    translateNumber: 0,
+    testCards: [
+      {
+        name: "Mystic Lake",
+        text:
+          "Wow, what would we do without you?  You have been our real-life angel & we are so thankful for your time, expertise and zest!  We are honored to have you with us all day.  You are amazing and we love you so much!",
+        image: AnnaScott
+      },
+      {
+        name: "The Graduate Hotel",
+        text:
+          "The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.\n\n- Ellie & Chris -",
+        image: ChrisEllie
+      },
+      {
+        name: "Silverwood Park\nThree Rivers Parks",
+        text:
+          "Cheri knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life.\n\n- Maddie & Ethan -",
+        image: silverwood
+      },
+      {
+        name: "The Metropolitan Event Center",
+        text:
+          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life.\n\n- Renee -",
+        image: Cele
+      },
+      {
+        name: "Mother-of-the-Bride Gratitude",
+        text:
+          "Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride, I was able to relax and enjoy every moment of the memorable day.\n\n- Jeanne -",
+        image: Maddie
+      },
+      {
+        name: "Women Run the Cities",
+        text:
+          "Cheri worked with us years ago at the start of what was to become Women Run the Cities Race. She was a key player helping propel the race from 900 to 4000 participants! We are thrilled to see her in the event coordinator business.\n\n- Meghan & Cathy -",
+        image: WRTC
+      }
+    ],
+    scroller: "",
+    scrollNumber: 0,
+    cardWidth: window.innerWidth * 0.5,
+    cardMargin: window.innerWidth * 0.1
+  };
+
+  componentDidMount() {
+    console.log(window.innerWidth);
+    const gotIt = document.getElementById("bottomScroller");
+    this.myTimer = setTimeout(() => {
+      this.rightClick();
+    }, 8500);
+    if (window.innerWidth < 768) {
+      this.setState(s => {
+        return {
+          testCards: s.testCards.splice(0, 4)
+        };
+      });
+    }
+  }
+
+  rightClick = () => {
+    clearTimeout(this.myTimer);
+    const gotIt = document.getElementById("bottomScroller");
+    if (this.state.scrollNumber !== this.state.testCards.length - 2) {
+      // gotIt.classList.add('slideLeft')
+
+      this.setState(s => {
+        return {
+          scrollNumber: s.scrollNumber + 1,
+          fromNumber: s.toNumber,
+          toNumber: s.toNumber + s.cardWidth
+        };
+      });
+      setTimeout(() => {
+        this.setState(s => {
+          return { translateNumber: s.translateNumber + s.cardWidth };
+        });
+      }, 1000);
+      // setTimeout(() => {
+      // }, 1000)
+    }
+  };
+
+  leftClick = () => {
+    clearTimeout(this.myTimer);
+    const gotIt = document.getElementById("bottomScroller");
+    if (
+      this.state.scrollNumber !== 0 &&
+      this.state.testCards.length > 2 &&
+      this.state.scrollNumber < this.state.testCards.length - 1
+    ) {
+      console.log("cool stuf");
+      // gotIt.classList.add('slideRight')
+      // setTimeout(() => {
+      this.setState(s => {
+        return {
+          scrollNumber: s.scrollNumber - 1,
+          fromNumber: s.toNumber,
+          toNumber: s.toNumber - s.cardWidth
+        };
+      });
+      setTimeout(() => {
+        this.setState(s => {
+          return {
+            translateNumber: s.translateNumber - s.cardWidth
+          };
+        });
+      }, 1000);
+      // }, 1000)
+    }
+  };
+
+  render() {
+    return (
+      <PurpDiv>
+        <TopDiv>
+          <TopDivText>Testimonials</TopDivText>
+        </TopDiv>
+        <BottomDiv>
+          {this.state.testCards.map((s, i) => {
+            return (
+              <SingleCard>
+                <CardTopTextWrap>
+                  <CardFirstText>{s.name}</CardFirstText>
+                </CardTopTextWrap>
+                <CardDateLocation src={s.image} maxWidth={i === 0 ? '300px' : '230px'} />
+                <CardSecondText>{s.text}</CardSecondText>
+              </SingleCard>
+            );
+          })}
+        </BottomDiv>
+      </PurpDiv>
+    );
+  }
+}
 const PurpDiv = styled.div`
   height: initial;
   display: flex;
@@ -149,141 +290,7 @@ const CardSecondText = styled.h4`
 
 const CardDateLocation = styled.img`
   max-width: 80%;
-  max-height: 230px;
+  max-height: ${props => props.maxWidth};
 `;
-
-class Testimonials extends React.Component {
-  state = {
-    fromNumber: 0,
-    toNumber: 0,
-    translateNumber: 0,
-    testCards: [
-      {
-        name: "The Graduate Hotel",
-        text:
-          "The fact that I never knew I miscounted tables for centerpieces and you were able to troubleshoot without hesitation just reassures that you are the best at what you do and that we are so thankful we had you there! Thank you, thank you, thank you.\n\n- Ellie & Chris -",
-        image: ChrisEllie
-      },
-      {
-        name: "Silverwood Park\nThree Rivers Parks",
-        text:
-          "Cheri knew exactly what I was looking for. Without her and her vision my wedding wouldn’t have turned out half as beautiful! All I had to do was send a few pictures of what I envisioned, and Cheri brought it to life.\n\n- Maddie & Ethan -",
-        image: silverwood
-      },
-      {
-        name: "The Metropolitan Event Center",
-        text:
-          "I had the pleasure of planning our large corporate holiday party with Cheri for a handful of years. Her organization, imagination and resourcefulness were key to designing and pulling off the large events. Cheri has an “anything is possible” attitude and can bring your party visions to life.\n\n- Renee -",
-        image: Cele
-      },
-      {
-        name: "Mother-of-the-Bride Gratitude",
-        text:
-          "Cheri was a joy to be around and made everyone feel at ease. Her planning skills and attention to every single detail is exactly what you hope for in a wedding coordinator. As the mother-of-the bride, I was able to relax and enjoy every moment of the memorable day.\n\n- Jeanne -",
-        image: Maddie
-      },
-      {
-        name: "Women Run the Cities",
-        text:
-          "Cheri worked with us years ago at the start of what was to become Women Run the Cities Race. She was a key player helping propel the race from 900 to 4000 participants! We are thrilled to see her in the event coordinator business.\n\n- Meghan & Cathy -",
-        image: WRTC
-      }
-    ],
-    scroller: "",
-    scrollNumber: 0,
-    cardWidth: window.innerWidth * 0.5,
-    cardMargin: window.innerWidth * 0.1
-  };
-
-  componentDidMount() {
-    console.log(window.innerWidth);
-    const gotIt = document.getElementById("bottomScroller");
-    this.myTimer = setTimeout(() => {
-      this.rightClick();
-    }, 8500);
-    if (window.innerWidth < 768) {
-      this.setState(s => {
-        return {
-          testCards: s.testCards.splice(0, 4)
-        };
-      });
-    }
-  }
-
-  rightClick = () => {
-    clearTimeout(this.myTimer);
-    const gotIt = document.getElementById("bottomScroller");
-    if (this.state.scrollNumber !== this.state.testCards.length - 2) {
-      // gotIt.classList.add('slideLeft')
-
-      this.setState(s => {
-        return {
-          scrollNumber: s.scrollNumber + 1,
-          fromNumber: s.toNumber,
-          toNumber: s.toNumber + s.cardWidth
-        };
-      });
-      setTimeout(() => {
-        this.setState(s => {
-          return { translateNumber: s.translateNumber + s.cardWidth };
-        });
-      }, 1000);
-      // setTimeout(() => {
-      // }, 1000)
-    }
-  };
-
-  leftClick = () => {
-    clearTimeout(this.myTimer);
-    const gotIt = document.getElementById("bottomScroller");
-    if (
-      this.state.scrollNumber !== 0 &&
-      this.state.testCards.length > 2 &&
-      this.state.scrollNumber < this.state.testCards.length - 1
-    ) {
-      console.log("cool stuf");
-      // gotIt.classList.add('slideRight')
-      // setTimeout(() => {
-      this.setState(s => {
-        return {
-          scrollNumber: s.scrollNumber - 1,
-          fromNumber: s.toNumber,
-          toNumber: s.toNumber - s.cardWidth
-        };
-      });
-      setTimeout(() => {
-        this.setState(s => {
-          return {
-            translateNumber: s.translateNumber - s.cardWidth
-          };
-        });
-      }, 1000);
-      // }, 1000)
-    }
-  };
-
-  render() {
-    return (
-      <PurpDiv>
-        <TopDiv>
-          <TopDivText>Testimonials</TopDivText>
-        </TopDiv>
-        <BottomDiv>
-          {this.state.testCards.map((s, i) => {
-            return (
-              <SingleCard>
-                <CardTopTextWrap>
-                  <CardFirstText>{s.name}</CardFirstText>
-                </CardTopTextWrap>
-                <CardDateLocation src={s.image} />
-                <CardSecondText>{s.text}</CardSecondText>
-              </SingleCard>
-            );
-          })}
-        </BottomDiv>
-      </PurpDiv>
-    );
-  }
-}
 
 export default Testimonials;

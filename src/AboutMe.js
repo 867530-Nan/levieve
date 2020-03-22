@@ -111,10 +111,9 @@ const TextFour = styled.p`
   margin: 0;
   text-align: left;
   color: #4c4c4c;
-  font-weight 700;
-  font-style: italic;
+  font-weight 300;
+  font-family: Neoteric Bold;
   width: 85%;
-  font-family: Lato;
   @media (max-width: 880px){
       margin: 40px 0 40px 10px;
   }
@@ -123,9 +122,9 @@ const TextFour = styled.p`
 const TextThree = styled.p`
   font-size: 18px;
   color: #4c4c4c;
-  font-weight 300;
-  width: 95%;
+
   font-family: Helvetica;
+  font-family: Neoteric;
   @media (max-width: 880px){
       margin: 30px 0 0 10px;
   }
