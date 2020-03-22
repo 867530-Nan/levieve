@@ -18,7 +18,7 @@ class Testimonials extends React.Component {
       {
         name: "Mystic Lake",
         text:
-          "Wow, what would we do without you?  You have been our real-life angel & we are so thankful for your time, expertise and zest!  We are honored to have you with us all day.  You are amazing and we love you so much!",
+          "Wow, what would we do without you?  You have been our real-life angel & we are so thankful for your time, expertise and zest!  We are honored to have you with us all day.  You are amazing and we love you so much!\n\n- Annd & Scott -",
         image: AnnaScott
       },
       {
